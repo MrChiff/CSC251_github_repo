@@ -6,34 +6,29 @@ package CSC251JOptonPaneFinalProject;
  * 2023/05/07
  */
 
-/*import javax.swing.JOptionPane; // Needed for Dialog Box
-
-import java.util.Scanner;
-
-public class GeometricArea {
-   public static void main(String[] args) {
-      Scanner scnr = new Scanner(System.in);
-      
-      Triangle triangle1 = new Triangle();
-      Triangle triangle2 = new Triangle();
-
-      // TODO: Read and set base and height for triangle1 (use setBase() and setHeight())
-      triangle1.setBase(scnr.nextDouble()); 
-      triangle1.setHeight(scnr.nextDouble());
-      
-      // TODO: Read and set base and height for triangle2 (use setBase() and setHeight())
-      triangle2.setBase(scnr.nextDouble()); 
-      triangle2.setHeight(scnr.nextDouble());
-      
-      System.out.println("Triangle with smaller area:");
-      
-      // TODO: Determine smaller triangle (use getArea())
-      //       and output smaller triangle's info (use printInfo())
-      if (triangle1.getArea() < triangle2.getArea()){triangle1.printInfo();}
-      else {triangle2.printInfo();}
-      
-   }
-}*/
+public String getShape(String shapeInput) {
+     String shapeType;
+     switch (shapeinput) {
+         case "Monday":
+             typeOfDay = "Start of work week";
+             break;
+         case "Tuesday":
+         case "Wednesday":
+         case "Thursday":
+             shapetype = "Midweek";
+             break;
+         case "Friday":
+             shapeType = "End of work week";
+             break;
+         case "Saturday":;
+         case "Sunday":
+             shapeType = "Weekend";
+             break;
+         default:
+             throw new IllegalArgumentException("Invalid type of shape: " + dayOfWeekArg);
+     }
+     return shapeType;
+}
 
 import javax.swing.JOptionPane; // Needed for Dialog Box
 
@@ -41,6 +36,8 @@ import javax.swing.JOptionPane; // Needed for Dialog Box
  * This program finds the area of a rectangle using input output dialog box.
  * 
  */
+
+
 public class GeometricArea {
 
     public static void main(String[] args) {
