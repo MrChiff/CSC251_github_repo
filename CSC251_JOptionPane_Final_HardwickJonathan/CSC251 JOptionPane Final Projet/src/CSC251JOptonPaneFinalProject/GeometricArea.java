@@ -6,29 +6,7 @@ package CSC251JOptonPaneFinalProject;
  * 2023/05/07
  */
 
-public String getShape(String shapeInput) {
-     String shapeType;
-     switch (shapeinput) {
-         case "Monday":
-             typeOfDay = "Start of work week";
-             break;
-         case "Tuesday":
-         case "Wednesday":
-         case "Thursday":
-             shapetype = "Midweek";
-             break;
-         case "Friday":
-             shapeType = "End of work week";
-             break;
-         case "Saturday":;
-         case "Sunday":
-             shapeType = "Weekend";
-             break;
-         default:
-             throw new IllegalArgumentException("Invalid type of shape: " + dayOfWeekArg);
-     }
-     return shapeType;
-}
+
 
 import javax.swing.JOptionPane; // Needed for Dialog Box
 
@@ -39,35 +17,63 @@ import javax.swing.JOptionPane; // Needed for Dialog Box
 
 
 public class GeometricArea {
+    
+ 
+public static void getShape(String shapeInput) {
+     String input; // To hold String input.
+     double height;   // To hold length.
+     double width;    // To hold width.
+     
+     switch (shapeInput) {
+         case "rectangle":
+             JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+             break;
+         case "square":
+             JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+             break;
+         case "triangle":
+              JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+              
+              Triangle triangle = new Triangle();
+                      
+              // Prompt user to input length.
+               input = JOptionPane.showInputDialog("Enter Height");
+        
+              // Convert the String input into an double.
+              height = Double.parseDouble(input);
+              triangle.setHeight(height); 
+        
+        
+              // Prompt use to input width.
+              input = JOptionPane.showInputDialog("Enter Width");
+        
+              // Convert the String input to an double.
+              width = Double.parseDouble(input);
+              triangle.setWidth(width);
+        
+              //The area is calculated for a triangle.
+        
+              // Display area of selected shape.
+              JOptionPane.showMessageDialog(null, "Area of the " + shapeInput +" is " + triangle.getArea() );
+             break;
+             
+         default:
+             JOptionPane.showMessageDialog(null, shapeInput + " is not a valid shape.");
+             break;
+     }
+     //return shapeType;
+}
+    
+    //public static void ()
 
     public static void main(String[] args) {
-        String input; // To hold String input.
-        double height;   // To hold length.
-        double width;    // To hold width.
+        
+        String shapeType;
         //int area;     // To hold area.
         
-        Triangle triangle = new Triangle();
+        shapeType=JOptionPane.showInputDialog("Enter Shape:") ;
         
-        // Prompt user to input length.
-        input = JOptionPane.showInputDialog("Enter Height");
-        
-        // Convert the String input into an double.
-        height = Double.parseDouble(input);
-        triangle.setHeight(height); 
-        
-        
-        // Prompt use to input width.
-        input = JOptionPane.showInputDialog("Enter Width");
-        
-        // Convert the String input to an double.
-        width = Double.parseDouble(input);
-        triangle.setWidth(width);
-        
-        //The area is calculated in each of the shape classes
-        
-        // Display area of selected shape.
-        JOptionPane.showMessageDialog(null, "Area of the triangle is " + triangle.getArea() );
-        
+        getShape(shapeType);
     }
     
 }
