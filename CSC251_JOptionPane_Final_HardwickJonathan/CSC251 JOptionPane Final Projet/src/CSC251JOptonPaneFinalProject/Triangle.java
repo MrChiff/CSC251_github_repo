@@ -45,18 +45,12 @@ public class Triangle {
     }
 
     public void printInfo() {
-        /*
-        System.out.println("Triangle: ");
-        System.out.printf("Base: %.2f\n", width);
-        System.out.printf("Height: %.2f\n", height);
-        System.out.printf("Area: %.2f\n", getArea());
-        */
         
         JOptionPane.showMessageDialog(null, "Triangle\n" + "Base: " + width + "\n"
                 + "Height: " + height + "\n" + "S1: " + s1 + "\n" + "S2: " + s2 + "\n" 
                 + "Perimeter: " + getPerimeter() + "\n" + "Area: " + getArea());
     }
-
+    /*
     public void main() {
         String input;
         double height;
@@ -96,5 +90,5 @@ public class Triangle {
         JOptionPane.showMessageDialog(null, "Triangle:\n" + "Base: " + width + "\n"
                 + "Height: " + height + "\n" + "S1: " + s1 + "\n" + "S2: " + s2 + "\n" 
                 + "Perimeter: " + perim + "\n" + "Area: " + area);
-    }
+    }*/
 }
