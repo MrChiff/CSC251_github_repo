@@ -46,9 +46,13 @@ public class Triangle {
 
     public void printInfo() {
         
-        JOptionPane.showMessageDialog(null, "Triangle\n" + "Base: " + width + "\n"
-                + "Height: " + height + "\n" + "S1: " + s1 + "\n" + "S2: " + s2 + "\n" 
-                + "Perimeter: " + getPerimeter() + "\n" + "Area: " + getArea());
+        JOptionPane.showMessageDialog(null, "Triangle:\n" 
+                                          + "Base: " + width + "\n"
+                                          + "Height: " + height + "\n" 
+                                          + "S1: " + s1 + "\n" 
+                                          + "S2: " + s2 + "\n" 
+                                          + "Perimeter: " + getPerimeter() + "\n" 
+                                          + "Area: " + getArea());
     }
     /*
     public void main() {

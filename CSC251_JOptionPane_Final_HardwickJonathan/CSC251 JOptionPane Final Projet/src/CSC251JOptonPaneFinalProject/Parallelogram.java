@@ -5,6 +5,8 @@
  */
 package CSC251JOptonPaneFinalProject;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Jonathan
@@ -24,23 +26,22 @@ public class Parallelogram {
    public void setLength(double userLength) {
       length = userLength;
    } 
- 
    public double getPerimeter(){
         double perim = 2 * width + 2 * length;
         return perim;
     }
-   
-   
    public double getArea() {
       double area = length * height;
       return area;
    }
    
    public void printInfo() {
-      System.out.printf("Length: %.2f\n", length);
-      System.out.printf("Height: %.2f\n", height);
-      System.out.printf("Width: %.2f\n", width);
-      System.out.printf("Area: %.2f\n", getArea());
+       JOptionPane.showMessageDialog(null, "Parallelogram: \n" + 
+                                           "Base:\t\t" + width + "\n"
+                                         + "Height:\t\t" + height + "\n" 
+                                         + "Length:\t\t" + length + "\n" 
+                                         + "Perimeter:\t" + getPerimeter() + "\n" 
+                                         + "Area:\t\t" + getArea());
    }
     
 }

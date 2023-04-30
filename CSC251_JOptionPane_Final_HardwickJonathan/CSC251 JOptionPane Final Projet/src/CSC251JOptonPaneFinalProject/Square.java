@@ -31,10 +31,12 @@ public class Square {
    
     public void printInfo() {
         
-        JOptionPane.showMessageDialog(null, "Square \n" + "Width: " + width + "\n"
-                + "Perimeter: " + getPerimeter() + "\n" + "Area: " + getArea());
+        JOptionPane.showMessageDialog(null, "Square: \n" 
+                                          + "Width:     " + width + "\n"
+                                          + "Perimeter: " + getPerimeter() + "\n" 
+                                          + "Area:      " + getArea());
     }
-    
+    /*
     public void main() {
         String input;
         double width;
@@ -56,6 +58,6 @@ public class Square {
         // Display the information
         JOptionPane.showMessageDialog(null, "Square: \n" + "Base: " + width + "\n"
                 + "Perimeter: " + perim + "\n" + "Area: " + area);
-    }
+    }*/
     
 }

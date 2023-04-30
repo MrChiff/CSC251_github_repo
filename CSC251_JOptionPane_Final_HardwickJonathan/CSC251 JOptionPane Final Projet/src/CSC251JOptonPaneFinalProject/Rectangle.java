@@ -5,6 +5,8 @@
  */
 package CSC251JOptonPaneFinalProject;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mr.chiff
@@ -31,8 +33,10 @@ public class Rectangle {
     }
    
     public void printInfo() {
-        System.out.printf("Base: %.2f\n", width);
-        System.out.printf("Height: %.2f\n", height);
-        System.out.printf("Area: %.2f\n", getArea());
+        JOptionPane.showMessageDialog(null, "Rectangle: \n" 
+                                          + "Base: " + width + "\n"
+                                          + "Height: " + height + "\n" 
+                                          + "Perimeter: " + getPerimeter() + "\n"
+                                          + "Area: " + getArea());
    }
 }
