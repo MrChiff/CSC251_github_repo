@@ -72,6 +72,14 @@ public class GeometricArea {
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
                     cont = false;
                     break;
+                case "parallelogram":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
+                case "trapezoid":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
                 case "triangle":
                     // Create a triangle shape object.
                     Triangle triangle = new Triangle();
@@ -114,6 +122,38 @@ public class GeometricArea {
 
                     cont = false;
 
+                    break;
+                case "circle":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
+                case "rectangular solid":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
+                case "cube":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
+                case "right circular cylinder":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
+                case "sphere":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
+                case "right circular cone":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
+                case "square or rectangular pyramid":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
+                case "right circular cone frustum":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
                     break;
 
                 default:
