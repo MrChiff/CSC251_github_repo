@@ -12,6 +12,12 @@ import javax.swing.JOptionPane; // Needed for Dialog Box
  * This program finds the area of a rectangle using input output dialog box.
  *
  */
+
+/*Like TODO:  Add pictures instead of text for the main menu.*/
+/*TODO: - Add other shapes to the switch statement in the getShape method.  
+        - Look at changing the name of the main program file to something more
+          inclusive.
+        */
 public class GeometricArea {
     
     public static String getShapeType(){
@@ -40,16 +46,34 @@ public class GeometricArea {
             
             switch (shapeInput) {
 
+                case "square":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    // Create a triangle shape object.
+                    Square square = new Square();
+
+                    // Prompt user to input length.
+                    input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+
+                    // Convert the String input to a double.
+                    width = Double.parseDouble(input);
+
+                    // Pass the width to the appropriate class
+                    square.setWidth(width);
+
+                    // The area is calculated for a triangle.
+                    // Display area of selected shape.
+                    square.printInfo();
+
+                    cont = false;
+
+                    break;
+                    
                 case "rectangle":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
                     cont = false;
                     break;
-                case "square":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
-                    cont = false;
-                    break;
                 case "triangle":
-                    //JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    // Create a triangle shape object.
                     Triangle triangle = new Triangle();
 
                     // Prompt user to input length.
