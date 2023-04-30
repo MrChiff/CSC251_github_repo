@@ -13,7 +13,6 @@ import javax.swing.JOptionPane;
  */
 public class Square {
     private double width;
-    //private double height;
    
     public void setWidth(double userWidth){
         width = userWidth;
@@ -34,6 +33,29 @@ public class Square {
         
         JOptionPane.showMessageDialog(null, "Square \n" + "Width: " + width + "\n"
                 + "Perimeter: " + getPerimeter() + "\n" + "Area: " + getArea());
-   }
+    }
+    
+    public void main() {
+        String input;
+        double width;
+        double area;
+        double perim;
+
+        // Prompt user to input length.
+        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+
+        // Convert the String input into an int.
+        width = Double.parseDouble(input);
+
+        // Calculate area of the rectangle.
+        area = width * width;
+
+        // Calculate the perimeter.
+        perim = 4 * width;
+
+        // Display the information
+        JOptionPane.showMessageDialog(null, "Square: \n" + "Base: " + width + "\n"
+                + "Perimeter: " + perim + "\n" + "Area: " + area);
+    }
     
 }

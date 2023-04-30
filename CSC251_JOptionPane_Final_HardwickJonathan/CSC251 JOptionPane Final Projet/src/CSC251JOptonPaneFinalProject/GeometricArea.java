@@ -50,7 +50,7 @@ public class GeometricArea {
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
                     // Create a triangle shape object.
                     Square square = new Square();
-
+                    /*
                     // Prompt user to input length.
                     input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
 
@@ -63,7 +63,8 @@ public class GeometricArea {
                     // The area is calculated for a triangle.
                     // Display area of selected shape.
                     square.printInfo();
-
+                    */
+                    square.main();
                     cont = false;
 
                     break;
@@ -81,9 +82,10 @@ public class GeometricArea {
                     cont = false;
                     break;
                 case "triangle":
+                    
                     // Create a triangle shape object.
                     Triangle triangle = new Triangle();
-
+                    /*
                     // Prompt user to input length.
                     input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Height:");
 
@@ -119,10 +121,12 @@ public class GeometricArea {
                     // The area is calculated for a triangle.
                     // Display area of selected shape.
                     triangle.printInfo();
-
+                    */
+                    
+                    triangle.main();
                     cont = false;
-
                     break;
+                    
                 case "circle":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
                     cont = false;
