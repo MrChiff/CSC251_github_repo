@@ -5,8 +5,7 @@ package CSC251JOptonPaneFinalProject;
  * Jonathan Hardwick
  * 2023/05/07
  */
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import javax.swing.JOptionPane; // Needed for Dialog Box
 
 /**
@@ -25,6 +24,7 @@ public class GeometricArea {
                     + "10. Sphere             " + "11. Right Circular Cone    " + "12. Square or Rectangular Pyramid   \n"
                     + "13. Right Circular Cone Frustum \n");
         
+        shapeType = shapeType.toLowerCase();
         return shapeType;
     }
 

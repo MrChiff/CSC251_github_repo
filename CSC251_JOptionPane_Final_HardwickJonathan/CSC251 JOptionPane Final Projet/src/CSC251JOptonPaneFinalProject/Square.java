@@ -5,6 +5,8 @@
  */
 package CSC251JOptonPaneFinalProject;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mr.chiff
@@ -16,9 +18,6 @@ public class Square {
     public void setWidth(double userWidth){
         width = userWidth;
     }
-    /*public void setHeight(double userHeight) {
-        height = userHeight;
-    }*/
     
     public double getPerimeter(){
         double perim = 4 * width;
@@ -26,14 +25,15 @@ public class Square {
     }
     
      public double getArea() {
-         //May want to look for a way to use the Math.pow(width,2) function
+        //May want to look for a way to use the Math.pow(width,2) function
         double area = width * width;
         return area;
     }
    
     public void printInfo() {
-        System.out.printf("Side: %.2f\n", width);
-        System.out.printf("Area: %.2f\n", getArea());
+        
+        JOptionPane.showMessageDialog(null, "Square \n" + "Width: " + width + "\n"
+                + "Perimeter: " + getPerimeter() + "\n" + "Area: " + getArea());
    }
     
 }
