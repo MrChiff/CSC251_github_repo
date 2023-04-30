@@ -26,19 +26,20 @@ public class Parallelogram {
    } 
  
    public double getPerimeter(){
-        double perim = width + s1 + s2;
+        double perim = 2 * width + 2 * length;
         return perim;
     }
    
    
    public double getArea() {
-      double area = 0.5 * width * height;
+      double area = length * height;
       return area;
    }
    
    public void printInfo() {
-      System.out.printf("Base: %.2f\n", width);
+      System.out.printf("Length: %.2f\n", length);
       System.out.printf("Height: %.2f\n", height);
+      System.out.printf("Width: %.2f\n", width);
       System.out.printf("Area: %.2f\n", getArea());
    }
     

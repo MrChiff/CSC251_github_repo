@@ -5,75 +5,118 @@ package CSC251JOptonPaneFinalProject;
  * Jonathan Hardwick
  * 2023/05/07
  */
-
-
-
+import java.util.HashSet;
+import java.util.Set;
 import javax.swing.JOptionPane; // Needed for Dialog Box
 
 /**
  * This program finds the area of a rectangle using input output dialog box.
- * 
+ *
  */
-
-
 public class GeometricArea {
     
- 
-public static void getShape(String shapeInput) {
-     String input; // To hold String input.
-     double height;   // To hold length.
-     double width;    // To hold width.
-     
-     switch (shapeInput) {
-         case "rectangle":
-             JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
-             break;
-         case "square":
-             JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
-             break;
-         case "triangle":
-              JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
-              
-              Triangle triangle = new Triangle();
-                      
-              // Prompt user to input length.
-               input = JOptionPane.showInputDialog("Enter Height");
+    public static String getShapeType(){
+        String shapeType;
         
-              // Convert the String input into an double.
-              height = Double.parseDouble(input);
-              triangle.setHeight(height); 
+        shapeType = JOptionPane.showInputDialog(null, "Choose A Shape: \n"
+                    + "1. Square              " + "2. Rectangle               " + "3. Parallelogram   \n"
+                    + "4. Trapezoid           " + "5. Triangle                " + "6. Circle \n"
+                    + "7. Rectangular Solid   " + "8. Cube                    " + "9. Right Circular Cylinder   \n"
+                    + "10. Sphere             " + "11. Right Circular Cone    " + "12. Square or Rectangular Pyramid   \n"
+                    + "13. Right Circular Cone Frustum \n");
         
-        
-              // Prompt use to input width.
-              input = JOptionPane.showInputDialog("Enter Width");
-        
-              // Convert the String input to an double.
-              width = Double.parseDouble(input);
-              triangle.setWidth(width);
-        
-              //The area is calculated for a triangle.
-        
-              // Display area of selected shape.
-              JOptionPane.showMessageDialog(null, "Area of the " + shapeInput +" is " + triangle.getArea() );
-             break;
-             
-         default:
-             JOptionPane.showMessageDialog(null, shapeInput + " is not a valid shape.");
-             break;
-     }
-     //return shapeType;
-}
-    
-    //public static void ()
+        return shapeType;
+    }
+
+    public static void getShape(String shapeInput) {
+        String input;  // To hold String input.
+        double height; // To hold length.
+        double width;  // To hold width.
+        double s1;     // To hold side1 length.
+        double s2;     // To hold side2 length.
+        boolean cont = true;  // Default state is to continue the program. 
+
+        while (cont != false) {
+            
+            switch (shapeInput) {
+
+                case "rectangle":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
+                case "square":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    cont = false;
+                    break;
+                case "triangle":
+                    //JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    Triangle triangle = new Triangle();
+
+                    // Prompt user to input length.
+                    input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Height:");
+
+                    // Convert the String input into a double.
+                    height = Double.parseDouble(input);
+
+                    //Pass the height to the appropriate class
+                    triangle.setHeight(height);
+
+                    // Prompt use to input width.
+                    input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Width");
+
+                    // Convert the String input to a double.
+                    width = Double.parseDouble(input);
+
+                    // Pass the width to the appropriate class
+                    triangle.setWidth(width);
+
+                    // Prompt user to input s1 length.
+                    input = JOptionPane.showInputDialog("Triangle: \n" + "Enter S1 length: ");
+
+                    // Convert the string input into a double
+                    s1 = Double.parseDouble(input);
+
+                    // Pass side1 length to the triangle class.
+                    triangle.setSide1(s1);
+
+                    // Prompt user to input s2 length.
+                    input = JOptionPane.showInputDialog("Triangle: \n" + "Enter S2 length: ");
+                    s2 = Double.parseDouble(input);
+                    triangle.setSide2(s2);
+
+                    // The area is calculated for a triangle.
+                    // Display area of selected shape.
+                    triangle.printInfo();
+
+                    cont = false;
+
+                    break;
+
+                default:
+                    JOptionPane.showMessageDialog(null, shapeInput + " is not a valid shape.");
+                    shapeInput = getShapeType();
+                    break;
+            }
+        }
+    }
+
 
     public static void main(String[] args) {
-        
+        String input;
         String shapeType;
-        //int area;     // To hold area.
-        
-        shapeType=JOptionPane.showInputDialog("Enter Shape:") ;
-        
-        getShape(shapeType);
+        boolean cont = true;
+        int redo = 0;
+
+        while (redo != 1) {
+
+            shapeType = getShapeType();
+
+            getShape(shapeType);       
+
+            input = JOptionPane.showInputDialog("Do you want to continue: \n"
+                    + "0. Yes \n" + "1. No \n");
+            redo = Integer.parseInt(input);
+        }
     }
-    
+
 }

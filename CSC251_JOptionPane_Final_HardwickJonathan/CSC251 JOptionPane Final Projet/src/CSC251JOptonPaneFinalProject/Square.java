@@ -33,7 +33,6 @@ public class Square {
    
     public void printInfo() {
         System.out.printf("Side: %.2f\n", width);
-        //System.out.printf("Height: %.2f\n", height);
         System.out.printf("Area: %.2f\n", getArea());
    }
     
