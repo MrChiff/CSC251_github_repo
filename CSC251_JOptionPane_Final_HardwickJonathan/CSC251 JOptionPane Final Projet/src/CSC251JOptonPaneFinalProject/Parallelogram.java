@@ -12,36 +12,39 @@ import javax.swing.JOptionPane;
  * @author Jonathan
  */
 public class Parallelogram {
-   private double width;
-   private double height;
-   private double length;
-   //private double s2;
-   
-   public void setWidth(double userWidth){
-      width = userWidth;
-   }
-   public void setHeight(double userHeight) {
-      height = userHeight;
-   }
-   public void setLength(double userLength) {
-      length = userLength;
-   } 
-   public double getPerimeter(){
+
+    private double width;
+    private double height;
+    private double length;
+
+    public void setWidth(double userWidth) {
+        width = userWidth;
+    }
+
+    public void setHeight(double userHeight) {
+        height = userHeight;
+    }
+
+    public void setLength(double userLength) {
+        length = userLength;
+    }
+
+    public double getPerimeter() {
         double perim = 2 * width + 2 * length;
         return perim;
     }
-   public double getArea() {
-      double area = length * height;
-      return area;
-   }
-   
-   public void printInfo() {
-       JOptionPane.showMessageDialog(null, "Parallelogram: \n" + 
-                                           "Base:\t\t" + width + "\n"
-                                         + "Height:\t\t" + height + "\n" 
-                                         + "Length:\t\t" + length + "\n" 
-                                         + "Perimeter:\t" + getPerimeter() + "\n" 
-                                         + "Area:\t\t" + getArea());
-   }
-    
+
+    public double getArea() {
+        double area = length * height;
+        return area;
+    }
+
+    public void printInfo() {
+        JOptionPane.showMessageDialog(null, "Parallelogram: \n"
+                + "Base:      " + width + "\n"
+                + "Height:    " + height + "\n"
+                + "Length:    " + length + "\n"
+                + "Perimeter: " + getPerimeter() + "\n"
+                + "Area:      " + getArea());
+    }
 }
