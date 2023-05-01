@@ -11,30 +11,29 @@ import javax.swing.JOptionPane;
  *
  * @author Jonathan
  */
-public class Circle {
-
+public class Sphere {
     private double r;   // radius
 
     public void setRadius(double userRadius) {
         r = userRadius;
     }
 
-    public double getCircumference() {
-        double circumf = 2.0 * Math.PI * r;
-        return circumf;
+    public double getSurfaceArea() {
+        double surfaceArea = 4.0 * Math.PI * Math.pow(r, 2.0);
+        return surfaceArea;
     }
 
-    public double getArea() {
+    public double getVolume() {
         //May want to look for a way to use the Math.pow(width,2) function
-        double area = Math.PI * Math.pow(r, 2.0);
-        return area;
+        double volume = (4.0/3.0) * Math.PI * Math.pow(r, 3.0);
+        return volume;
     }
 
     public void printInfo() {
 
-        JOptionPane.showMessageDialog(null, "Circle: \n"
+        JOptionPane.showMessageDialog(null, "Sphere: \n"
                                           + "Radius:     " + r + "\n"
-                                          + "Circumference: " + getCircumference() + "\n"
-                                          + "Area:      " + getArea());
+                                          + "Surface Area: " + getSurfaceArea() + "\n"
+                                          + "Volume:      " + getVolume());
     }
 }

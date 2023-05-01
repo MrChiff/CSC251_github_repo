@@ -26,9 +26,9 @@ public class RectangularSolid {
         length = userLength;
     }
     public double getSurfaceArea(){
-        double surfaceArea = 2 * length * height 
-                           + 2 * width * height 
-                           + 2 * width * length;
+        double surfaceArea = 2.0 * length * height 
+                           + 2.0 * width * height 
+                           + 2.0 * width * length;
         return surfaceArea;
     }
    
@@ -38,7 +38,7 @@ public class RectangularSolid {
     }
    
     public void printInfo() {
-        JOptionPane.showMessageDialog(null, "Rectangle: \n" 
+        JOptionPane.showMessageDialog(null, "Rectanglar Solid: \n" 
                                           + "Base: " + width + "\n"
                                           + "Height: " + height + "\n" 
                                           + "Length: " + length + "\n" 

@@ -23,7 +23,7 @@ public class Rectangle {
     }
     
     public double getPerimeter(){
-        double perim = 2 * width + 2 * height;
+        double perim = 2.0 * width + 2.0 * height;
         return perim;
     }
    

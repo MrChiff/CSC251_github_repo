@@ -30,7 +30,7 @@ public class Parallelogram {
     }
 
     public double getPerimeter() {
-        double perim = 2 * width + 2 * length;
+        double perim = 2.0 * (width + length);
         return perim;
     }
 
@@ -41,10 +41,10 @@ public class Parallelogram {
 
     public void printInfo() {
         JOptionPane.showMessageDialog(null, "Parallelogram: \n"
-                + "Base:      " + width + "\n"
-                + "Height:    " + height + "\n"
-                + "Length:    " + length + "\n"
-                + "Perimeter: " + getPerimeter() + "\n"
-                + "Area:      " + getArea());
+                                          + "Base:      " + width + "\n"
+                                          + "Height:    " + height + "\n"
+                                          + "Length:    " + length + "\n"
+                                          + "Perimeter: " + getPerimeter() + "\n"
+                                          + "Area:      " + getArea());
     }
 }

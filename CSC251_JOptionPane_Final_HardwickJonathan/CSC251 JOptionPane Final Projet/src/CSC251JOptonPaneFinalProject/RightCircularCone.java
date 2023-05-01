@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author Jonathan
  */
-public class RightCircularCylinder {
+public class RightCircularCone {
     private double r;   // radius
     private double h;   // height
 
@@ -22,13 +22,13 @@ public class RightCircularCylinder {
         h = userHeight;
     }
     public double getSurfaceArea(){
-        double surfaceArea = 2.0 * Math.PI * (r * h + Math.pow(r,2.0));
+        double surfaceArea = Math.PI * r * Math.pow((Math.pow(r, 2.0) + Math.pow(h, 2.0)), 0.5);
         return surfaceArea;
     }
 
     public double getVolume() {
         //May want to look for a way to use the Math.pow(width,2) function
-        double volume = Math.PI * Math.pow(r, 2.0) * h;
+        double volume = (1.0/3.0) * Math.PI * Math.pow(r, 2.0) * h;
         return volume;
     }
 
@@ -40,5 +40,4 @@ public class RightCircularCylinder {
                                           + "Surface Area: " + getSurfaceArea() + "\n"
                                           + "Volume:      " + getVolume());
     }
-    
 }

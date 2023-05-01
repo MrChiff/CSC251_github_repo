@@ -19,18 +19,18 @@ public class Cube {
     }
     
     public double getSurfaceArea(){
-        double surfaceArea = 6 * Math.pow(s, 2);
+        double surfaceArea = 6.0 * Math.pow(s, 2.0);
         return surfaceArea;
     }
     
      public double getVolume() {
-        double volume = Math.pow(s, 3);
+        double volume = Math.pow(s, 3.0);
         return volume;
     }
    
     public void printInfo() {
         
-        JOptionPane.showMessageDialog(null, "Square: \n" 
+        JOptionPane.showMessageDialog(null, "Cube: \n" 
                                           + "Width:     " + s + "\n"
                                           + "Perimeter: " + getSurfaceArea() + "\n" 
                                           + "Area:      " + getVolume());

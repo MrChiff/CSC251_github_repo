@@ -19,12 +19,12 @@ public class Square {
     }
     
     public double getPerimeter(){
-        double perim = 4 * s;
+        double perim = 4.0 * s;
         return perim;
     }
     
      public double getArea() {
-        double area = Math.pow(s, 2);
+        double area = Math.pow(s, 2.0);
         return area;
     }
    
