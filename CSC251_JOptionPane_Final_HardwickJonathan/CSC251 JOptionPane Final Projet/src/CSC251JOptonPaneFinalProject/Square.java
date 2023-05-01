@@ -12,27 +12,26 @@ import javax.swing.JOptionPane;
  * @author mr.chiff
  */
 public class Square {
-    private double width;
+    private double s;
    
-    public void setWidth(double userWidth){
-        width = userWidth;
+    public void setSide(double userSide){
+        s = userSide;
     }
     
     public double getPerimeter(){
-        double perim = 4 * width;
+        double perim = 4 * s;
         return perim;
     }
     
      public double getArea() {
-        //May want to look for a way to use the Math.pow(width,2) function
-        double area = width * width;
+        double area = Math.pow(s, 2);
         return area;
     }
    
     public void printInfo() {
         
         JOptionPane.showMessageDialog(null, "Square: \n" 
-                                          + "Width:     " + width + "\n"
+                                          + "Width:     " + s + "\n"
                                           + "Perimeter: " + getPerimeter() + "\n" 
                                           + "Area:      " + getArea());
     }
