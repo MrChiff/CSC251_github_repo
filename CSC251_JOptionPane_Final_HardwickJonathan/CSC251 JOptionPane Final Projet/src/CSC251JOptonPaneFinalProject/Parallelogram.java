@@ -20,7 +20,7 @@ public class Parallelogram {
 
     public void setWidth() {
         // Prompt user to input width.
-        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+        input = JOptionPane.showInputDialog("Parallelogram: \n" + "Enter Width:");
 
         // Convert the String input to a double.
         width = Double.parseDouble(input);
@@ -28,7 +28,7 @@ public class Parallelogram {
 
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+        input = JOptionPane.showInputDialog("Parallelogram: \n" + "Enter Width:");
 
         // Convert the String input to a double.
         height = Double.parseDouble(input);
@@ -36,7 +36,7 @@ public class Parallelogram {
 
     public void setLength(double userLength) {
         // Prompt user to input length.
-        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+        input = JOptionPane.showInputDialog("Parallelogram: \n" + "Enter Width:");
 
         // Convert the String input to a double.
         length = Double.parseDouble(input);

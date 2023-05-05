@@ -18,14 +18,14 @@ public class Rectangle {
    
     public void setWidth(){
         // Prompt user to input width.
-        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+        input = JOptionPane.showInputDialog("Rectangle: \n" + "Enter Width:");
 
         // Convert the String input to a double.
         width = Double.parseDouble(input);
     }
-    public void setHeight(double userHeight) {
+    public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+        input = JOptionPane.showInputDialog("Rectangle: \n" + "Enter Width:");
 
         // Convert the String input to a double.
         height = Double.parseDouble(input);
