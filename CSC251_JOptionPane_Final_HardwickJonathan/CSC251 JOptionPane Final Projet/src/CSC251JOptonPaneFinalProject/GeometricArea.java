@@ -35,11 +35,7 @@ public class GeometricArea {
     }
 
     public static void getShape(String shapeInput) {
-        String input;  // To hold String input.
-        double height; // To hold length.
-        double width;  // To hold width.
-        double s1;     // To hold side1 length.
-        double s2;     // To hold side2 length.
+        
         boolean cont = true;  // Default state is to continue the program. 
 
         while (cont != false) {
@@ -101,7 +97,11 @@ public class GeometricArea {
                     // Display the calculated properties of the selected shape.
                     triangle.printInfo();
                     
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
                     
                 case "circle":

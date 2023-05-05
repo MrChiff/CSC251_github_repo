@@ -14,12 +14,21 @@ import javax.swing.JOptionPane;
 public class Rectangle {
     private double width;
     private double height;
+    private String input;
    
-    public void setWidth(double userWidth){
-        width = userWidth;
+    public void setWidth(){
+        // Prompt user to input width.
+        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+
+        // Convert the String input to a double.
+        width = Double.parseDouble(input);
     }
     public void setHeight(double userHeight) {
-        height = userHeight;
+        // Prompt user to input height.
+        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+
+        // Convert the String input to a double.
+        height = Double.parseDouble(input);
     }
     
     public double getPerimeter(){

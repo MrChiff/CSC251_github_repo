@@ -16,7 +16,7 @@ public class Square {
     private String input;
    
     public void setSide(){
-        // Prompt user to input length.
+        // Prompt user to input side length.
         input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
 
         // Convert the String input to a double.
