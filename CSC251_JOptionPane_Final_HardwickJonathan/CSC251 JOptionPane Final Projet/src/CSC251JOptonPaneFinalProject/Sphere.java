@@ -13,9 +13,14 @@ import javax.swing.JOptionPane;
  */
 public class Sphere {
     private double r;   // radius
+    private String input;
 
-    public void setRadius(double userRadius) {
-        r = userRadius;
+    public void setRadius() {
+        // Prompt user to input radius.
+        input = JOptionPane.showInputDialog("Circle: \n" + "Enter Radius:");
+
+        // Convert the String input to a double.
+        r = Double.parseDouble(input);
     }
 
     public double getSurfaceArea() {
