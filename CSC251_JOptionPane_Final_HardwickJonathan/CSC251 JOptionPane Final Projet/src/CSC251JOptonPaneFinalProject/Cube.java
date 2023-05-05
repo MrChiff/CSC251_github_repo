@@ -13,9 +13,14 @@ import javax.swing.JOptionPane;
  */
 public class Cube {
     private double s;
+    private String input;
    
-    public void setSide(double userSide){
-        s = userSide;
+    public void setSide(){
+        // Prompt user to input side length.
+        input = JOptionPane.showInputDialog("Square: \n" + "Enter Side Length:");
+
+        // Convert the String input to a double.
+        s = Double.parseDouble(input);
     }
     
     public double getSurfaceArea(){
