@@ -36,16 +36,16 @@ public class Triangle {
     }
 
     public void setSide1() {
-        // Prompt user to input width.
-        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Height");
+        // Prompt user to input side 1 length.
+        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Side 1 Length:");
 
         // Convert the String input to an int.
         s1 = Double.parseDouble(input);
     }
 
     public void setSide2() {
-        // Prompt user to input width.
-        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Height");
+        // Prompt user to input side 2 length.
+        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Side 2 Length:");
 
         // Convert the String input to an int.
         s2 = Double.parseDouble(input);

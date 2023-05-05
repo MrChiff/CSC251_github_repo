@@ -47,7 +47,6 @@ public class GeometricArea {
                     // Create a triangle shape object.
                     Square square = new Square();
                     
-
                     // Pass the width to the appropriate class
                     square.setSide();
 

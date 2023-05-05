@@ -25,7 +25,7 @@ public class Rectangle {
     }
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Rectangle: \n" + "Enter Width:");
+        input = JOptionPane.showInputDialog("Rectangle: \n" + "Enter Height:");
 
         // Convert the String input to a double.
         height = Double.parseDouble(input);

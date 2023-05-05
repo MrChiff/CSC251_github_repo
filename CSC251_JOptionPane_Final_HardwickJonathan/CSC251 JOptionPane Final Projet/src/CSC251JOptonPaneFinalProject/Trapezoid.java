@@ -21,16 +21,16 @@ public class Trapezoid {
     private String input;
 
     public void setBase1() {
-        // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Width:");
+        // Prompt user to input base 1 length.
+        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Base 1 Length:");
 
         // Convert the String input to a double.
         b1 = Double.parseDouble(input);
     }
     
     public void setBase2() {
-        // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Width:");
+        // Prompt user to input base 2 length.
+        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Base 2 Length:");
 
         // Convert the String input to a double.
         b2 = Double.parseDouble(input);
@@ -38,23 +38,23 @@ public class Trapezoid {
 
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Width:");
+        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Height:");
 
         // Convert the String input to a double.
         height = Double.parseDouble(input);
     }
 
     public void setSide1() {
-        // Prompt user to input side length.
-        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Width:");
+        // Prompt user to input side 1 length.
+        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Side 1 Length:");
 
         // Convert the String input to a double.
         s1 = Double.parseDouble(input);
     }
     
     public void setSide2() {
-        // Prompt user to input side length.
-        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Width:");
+        // Prompt user to input side 2 length.
+        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Side 1 Length:");
 
         // Convert the String input to a double.
         s2 = Double.parseDouble(input);

@@ -13,10 +13,15 @@ import javax.swing.JOptionPane;
  */
 public class Circle {
 
-    private double r;   // radius
+    private double r;       // radius
+    private String input;   // user input
 
     public void setRadius(double userRadius) {
-        r = userRadius;
+        // Prompt user to input radius.
+        input = JOptionPane.showInputDialog("Circle: \n" + "Enter Radius:");
+
+        // Convert the String input to a double.
+        r = Double.parseDouble(input);
     }
 
     public double getCircumference() {

@@ -28,15 +28,15 @@ public class Parallelogram {
 
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Parallelogram: \n" + "Enter Width:");
+        input = JOptionPane.showInputDialog("Parallelogram: \n" + "Enter Height:");
 
         // Convert the String input to a double.
         height = Double.parseDouble(input);
     }
 
-    public void setLength(double userLength) {
+    public void setLength() {
         // Prompt user to input length.
-        input = JOptionPane.showInputDialog("Parallelogram: \n" + "Enter Width:");
+        input = JOptionPane.showInputDialog("Parallelogram: \n" + "Enter Length:");
 
         // Convert the String input to a double.
         length = Double.parseDouble(input);
