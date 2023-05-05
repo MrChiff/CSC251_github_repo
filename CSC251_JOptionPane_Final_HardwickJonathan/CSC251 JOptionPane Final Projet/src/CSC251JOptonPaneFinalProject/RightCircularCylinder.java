@@ -14,12 +14,21 @@ import javax.swing.JOptionPane;
 public class RightCircularCylinder {
     private double r;   // radius
     private double h;   // height
+    private String input;
 
-    public void setRadius(double userRadius) {
-        r = userRadius;
+    public void setRadius() {
+        // Prompt user to input radius.
+        input = JOptionPane.showInputDialog("Circle: \n" + "Enter Radius:");
+
+        // Convert the String input to a double.
+        r = Double.parseDouble(input);
     }
-    public void setHeight(double userHeight) {
-        h = userHeight;
+    public void setHeight() {
+        // Prompt user to input height.
+        input = JOptionPane.showInputDialog("Rectangle: \n" + "Enter Height:");
+
+        // Convert the String input to a double.
+        h = Double.parseDouble(input);
     }
     public double getSurfaceArea(){
         double surfaceArea = 2.0 * Math.PI * (r * h + Math.pow(r,2.0));
