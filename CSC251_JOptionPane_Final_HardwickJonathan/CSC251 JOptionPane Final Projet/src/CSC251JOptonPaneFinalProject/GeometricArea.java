@@ -50,14 +50,10 @@ public class GeometricArea {
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
                     // Create a triangle shape object.
                     Square square = new Square();
-                    // Prompt user to input length.
-                    input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
-
-                    // Convert the String input to a double.
-                    width = Double.parseDouble(input);
+                    
 
                     // Pass the width to the appropriate class
-                    square.setWidth(width);
+                    square.setSide();
 
                     // The area is calculated for a triangle.
                     // Display area of selected shape.
@@ -87,40 +83,22 @@ public class GeometricArea {
                     // Create a triangle shape object.
                     Triangle triangle = new Triangle();
                     
-                    // Prompt user to input length.
-                    input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Height:");
+                    // Call the class to set the height.
+                    triangle.setHeight();
 
-                    // Convert the String input into a double.
-                    height = Double.parseDouble(input);
+                    // Call the class to set the width.
+                    triangle.setWidth();
+                    
+                    // Call the class to set the s1 value.
+                    triangle.setSide1();
+                    
+                    // Call the class to set the s2 value.
+                    triangle.setSide2();
 
-                    //Pass the height to the appropriate class
-                    triangle.setHeight(height);
-
-                    // Prompt use to input width.
-                    input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Width");
-
-                    // Convert the String input to a double.
-                    width = Double.parseDouble(input);
-
-                    // Pass the width to the appropriate class
-                    triangle.setWidth(width);
-
-                    // Prompt user to input s1 length.
-                    input = JOptionPane.showInputDialog("Triangle: \n" + "Enter S1 length: ");
-
-                    // Convert the string input into a double
-                    s1 = Double.parseDouble(input);
-
-                    // Pass side1 length to the triangle class.
-                    triangle.setSide1(s1);
-
-                    // Prompt user to input s2 length.
-                    input = JOptionPane.showInputDialog("Triangle: \n" + "Enter S2 length: ");
-                    s2 = Double.parseDouble(input);
-                    triangle.setSide2(s2);
-
-                    // The area is calculated for a triangle.
-                    // Display area of selected shape.
+                    // The area and perimeter are calculated for a triangle
+                    // inside the triangle class.
+                    
+                    // Display the calculated properties of the selected shape.
                     triangle.printInfo();
                     
                     cont = false;

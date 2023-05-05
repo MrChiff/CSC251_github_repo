@@ -17,21 +17,38 @@ public class Triangle {
     private double height;
     private double s1;
     private double s2;
+    private String input;
 
-    public void setWidth(double userWidth) {
-        width = userWidth;
+    public void setWidth() {
+        // Prompt user to input length.
+        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Width");
+
+        // Convert the String input into an int.
+        width = Double.parseDouble(input);
     }
 
-    public void setHeight(double userHeight) {
-        height = userHeight;
+    public void setHeight() {
+        // Prompt user to input width.
+        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Height");
+
+        // Convert the String input to an int.
+        height = Double.parseDouble(input);
     }
 
-    public void setSide1(double userSide1) {
-        s1 = userSide1;
+    public void setSide1() {
+        // Prompt user to input width.
+        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Height");
+
+        // Convert the String input to an int.
+        s1 = Double.parseDouble(input);
     }
 
-    public void setSide2(double userSide2) {
-        s2 = userSide2;
+    public void setSide2() {
+        // Prompt user to input width.
+        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Height");
+
+        // Convert the String input to an int.
+        s2 = Double.parseDouble(input);
     }
 
     public double getPerimeter() {
@@ -54,45 +71,5 @@ public class Triangle {
                                           + "Perimeter: " + getPerimeter() + "\n" 
                                           + "Area: " + getArea());
     }
-    /*
-    public void main() {
-        String input;
-        double height;
-        double width;
-        double area;
-        double s1;
-        double s2;
-        double perim;
-
-        // Prompt user to input length.
-        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Width");
-
-        // Convert the String input into an int.
-        width = Double.parseDouble(input);
-
-        // Prompt user to input width.
-        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter Height");
-
-        // Convert the String input to an int.
-        height = Double.parseDouble(input);
-
-        // Calculate area of the rectangle.
-        area = height * width;
-
-        // Prompt user to input s1 length.
-        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter S1 length: ");
-        s1 = Double.parseDouble(input);
-
-        // Prompt user to input s2 length.
-        input = JOptionPane.showInputDialog("Triangle: \n" + "Enter S2 length: ");
-        s2 = Double.parseDouble(input);
-
-        // Calculate the perimeter.
-        perim = s1 + s2 + width;
-
-        // Display the information
-        JOptionPane.showMessageDialog(null, "Triangle:\n" + "Base: " + width + "\n"
-                + "Height: " + height + "\n" + "S1: " + s1 + "\n" + "S2: " + s2 + "\n" 
-                + "Perimeter: " + perim + "\n" + "Area: " + area);
-    }*/
+    
 }

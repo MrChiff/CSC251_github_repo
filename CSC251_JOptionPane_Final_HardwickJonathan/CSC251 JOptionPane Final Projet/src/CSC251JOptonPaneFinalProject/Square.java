@@ -13,9 +13,14 @@ import javax.swing.JOptionPane;
  */
 public class Square {
     private double s;
+    private String input;
    
-    public void setSide(double userSide){
-        s = userSide;
+    public void setSide(){
+        // Prompt user to input length.
+        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+
+        // Convert the String input to a double.
+        s = Double.parseDouble(input);
     }
     
     public double getPerimeter(){
@@ -35,28 +40,5 @@ public class Square {
                                           + "Perimeter: " + getPerimeter() + "\n" 
                                           + "Area:      " + getArea());
     }
-    /*
-    public void main() {
-        String input;
-        double width;
-        double area;
-        double perim;
-
-        // Prompt user to input length.
-        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
-
-        // Convert the String input into an int.
-        width = Double.parseDouble(input);
-
-        // Calculate area of the rectangle.
-        area = width * width;
-
-        // Calculate the perimeter.
-        perim = 4 * width;
-
-        // Display the information
-        JOptionPane.showMessageDialog(null, "Square: \n" + "Base: " + width + "\n"
-                + "Perimeter: " + perim + "\n" + "Area: " + area);
-    }*/
-    
+       
 }
