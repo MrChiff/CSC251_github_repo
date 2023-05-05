@@ -16,7 +16,7 @@ public class Circle {
     private double r;       // radius
     private String input;   // user input
 
-    public void setRadius(double userRadius) {
+    public void setRadius() {
         // Prompt user to input radius.
         input = JOptionPane.showInputDialog("Circle: \n" + "Enter Radius:");
 
