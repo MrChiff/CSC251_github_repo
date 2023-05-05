@@ -16,17 +16,30 @@ public class Parallelogram {
     private double width;
     private double height;
     private double length;
+    private String input;
 
-    public void setWidth(double userWidth) {
-        width = userWidth;
+    public void setWidth() {
+        // Prompt user to input width.
+        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+
+        // Convert the String input to a double.
+        width = Double.parseDouble(input);
     }
 
-    public void setHeight(double userHeight) {
-        height = userHeight;
+    public void setHeight() {
+        // Prompt user to input height.
+        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+
+        // Convert the String input to a double.
+        height = Double.parseDouble(input);
     }
 
     public void setLength(double userLength) {
-        length = userLength;
+        // Prompt user to input length.
+        input = JOptionPane.showInputDialog("Square: \n" + "Enter Width:");
+
+        // Convert the String input to a double.
+        length = Double.parseDouble(input);
     }
 
     public double getPerimeter() {
