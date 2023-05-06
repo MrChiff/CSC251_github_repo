@@ -17,7 +17,7 @@ public class Sphere {
 
     public void setRadius() {
         // Prompt user to input radius.
-        input = JOptionPane.showInputDialog("Circle: \n" + "Enter Radius:");
+        input = JOptionPane.showInputDialog("Sphere: \n" + "Enter Radius:");
 
         // Convert the String input to a double.
         r = Double.parseDouble(input);

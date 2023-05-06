@@ -7,54 +7,48 @@ package CSC251JOptonPaneFinalProject;
 
 import javax.swing.JOptionPane;
 
-/*
+/**
  *
  * @author Jonathan
  */
-public class RectangularSolid {
+public class RectangularPyramid {
+    private String input;
     private double width;
     private double height;
     private double length;
-    private String input;
-   
+    
     public void setWidth() {
         // Prompt user to input width.
-        input = JOptionPane.showInputDialog("Rectanglar Solid: \n" + "Enter Width:");
+        input = JOptionPane.showInputDialog("Rectanglar Pyramid: \n" + "Enter Width:");
 
         // Convert the String input to a double.
         width = Double.parseDouble(input);
     }
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Rectanglar Solid: \n" + "Enter Height:");
+        input = JOptionPane.showInputDialog("Rectanglar Pyramid: \n" + "Enter Height:");
 
         // Convert the String input to a double.
         height = Double.parseDouble(input);
     }
     public void setLength() {
         // Prompt user to input length.
-        input = JOptionPane.showInputDialog("Rectanglar Solid: \n" + "Enter Length:");
+        input = JOptionPane.showInputDialog("Rectanglar Pyramid: \n" + "Enter Length:");
 
         // Convert the String input to a double.
         length = Double.parseDouble(input);
     }
-    public double getSurfaceArea(){
-        double surfaceArea = 2.0 * length * height 
-                           + 2.0 * width * height 
-                           + 2.0 * width * length;
-        return surfaceArea;
-    }
     public double getVolume() {
-        double volume = width * height * length;
+        double volume = (1.0/3.0) * width * height * length;
         return volume;
     }
    
     public void printInfo() {
-        JOptionPane.showMessageDialog(null, "Rectanglar Solid: \n" 
-                                          + "Base: " + width + "\n"
+        JOptionPane.showMessageDialog(null, "Rectanglar Pyramid: \n" 
+                                          + "Width: " + width + "\n"
                                           + "Height: " + height + "\n" 
-                                          + "Length: " + length + "\n" 
-                                          + "Surface Area: " + getSurfaceArea() + "\n"
+                                          + "Length: " + length + "\n"
                                           + "Volume: " + getVolume());
    }
+    
 }

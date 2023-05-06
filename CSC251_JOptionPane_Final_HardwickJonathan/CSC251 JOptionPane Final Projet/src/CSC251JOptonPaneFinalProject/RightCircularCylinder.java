@@ -18,14 +18,14 @@ public class RightCircularCylinder {
 
     public void setRadius() {
         // Prompt user to input radius.
-        input = JOptionPane.showInputDialog("Circle: \n" + "Enter Radius:");
+        input = JOptionPane.showInputDialog("Right Circular Cylinder: \n" + "Enter Radius:");
 
         // Convert the String input to a double.
         r = Double.parseDouble(input);
     }
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Rectangle: \n" + "Enter Height:");
+        input = JOptionPane.showInputDialog("Right Circular Cylinder: \n" + "Enter Height:");
 
         // Convert the String input to a double.
         h = Double.parseDouble(input);
