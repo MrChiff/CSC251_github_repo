@@ -114,7 +114,7 @@ public class GeometricArea {
                 case "trapezoid":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
                     
-                    // Create a Parallelogram shape object.
+                    // Create a Trapezoid shape object.
                     Trapezoid trap = new Trapezoid();
                     
                     // Pass the width to the appropriate class
@@ -177,7 +177,7 @@ public class GeometricArea {
                 case "circle":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
                     
-                    // Create a Square shape object.
+                    // Create a Circle shape object.
                     Circle circle = new Circle();
                     
                     // Pass the width to the appropriate class
@@ -195,17 +195,74 @@ public class GeometricArea {
                     break;
                     
                 case "rectangular solid":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
+                    
+                    // Create a RectangularSolid shape object.
+                    RectangularSolid rectsolid = new RectangularSolid();
+                    
+                    // Pass the width to the appropriate class
+                    rectsolid.setWidth();
+                    
+                    // Pass the length to the appropriate class
+                    rectsolid.setLength();
+                    
+                    // Pass the height to the appropriate class
+                    rectsolid.setHeight();
+
+                    // The area is calculated for a triangle.
+                    // Display volumen and surface area of selected shape.
+                    rectsolid.printInfo();
+                    
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
+                    
                 case "cube":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
+                    
+                    // Create a Cube shape object.
+                    Cube cube = new Cube();
+                    
+                    // Pass the width to the appropriate class
+                    cube.setSide();
+
+                    // The area is calculated for a triangle.
+                    // Display volumen and surface area of selected shape.
+                    cube.printInfo();
+                    
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
+                    
                 case "right circular cylinder":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    
+                    // Create a RightCircularCylinder shape object.
+                    RightCircularCylinder rtcircyl = new RightCircularCylinder();
+                    
+                    // Pass the height to the appropriate class
+                    rtcircyl.setHeight();
+                    
+                    // Pass the width to the appropriate class
+                    rtcircyl.setRadius();
+                    
+                    // The area is calculated for a triangle.
+                    // Display volumen and surface area of selected shape.
+                    rtcircyl.printInfo();
+                    
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
+                    
                 case "sphere":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
                     cont = false;

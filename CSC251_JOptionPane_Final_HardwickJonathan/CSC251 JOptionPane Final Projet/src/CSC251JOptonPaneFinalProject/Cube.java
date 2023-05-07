@@ -36,9 +36,9 @@ public class Cube {
     public void printInfo() {
         
         JOptionPane.showMessageDialog(null, "Cube: \n" 
-                                          + "Width:     " + s + "\n"
-                                          + "Perimeter: " + getSurfaceArea() + "\n" 
-                                          + "Area:      " + getVolume());
+                                          + "Side Length:  " + s + "\n"
+                                          + "Perimeter:    " + getSurfaceArea() + "\n" 
+                                          + "Area:         " + getVolume());
     }
     
 }

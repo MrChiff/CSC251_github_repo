@@ -53,7 +53,7 @@ public class RightCircularConeFrustum {
 
     public double getVolume() {
         //May want to look for a way to use the Math.pow(width,2) function
-        double volume = (1.0/3.0) * Math.PI * (Math.pow(r, 2.0) + r * R + Math.pow(R, 2)) * h;
+        double volume = (1.0/3.0) * Math.PI * (Math.pow(r, 2.0) + r * R + Math.pow(R, 2.0)) * h;
         return volume;
     }
 
