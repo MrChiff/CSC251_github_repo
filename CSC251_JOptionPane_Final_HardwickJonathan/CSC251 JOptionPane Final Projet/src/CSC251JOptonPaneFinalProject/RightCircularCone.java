@@ -18,14 +18,14 @@ public class RightCircularCone {
 
     public void setRadius() {
         // Prompt user to input radius.
-        input = JOptionPane.showInputDialog("Right Circular Cylinder: \n" + "Enter Radius:");
+        input = JOptionPane.showInputDialog("Right Circular Cone: \n" + "Enter Radius:");
 
         // Convert the String input to a double.
         r = Double.parseDouble(input);
     }
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Right Circular Cylinder: \n" + "Enter Height:");
+        input = JOptionPane.showInputDialog("Right Circular Cone: \n" + "Enter Height:");
 
         // Convert the String input to a double.
         h = Double.parseDouble(input);
@@ -43,7 +43,7 @@ public class RightCircularCone {
 
     public void printInfo() {
 
-        JOptionPane.showMessageDialog(null, "Right Circular Cylinder: \n"
+        JOptionPane.showMessageDialog(null, "Right Circular Cone: \n"
                                           + "Radius:     " + r + "\n"
                                           + "Height:     " + h + "\n"
                                           + "Surface Area: " + getSurfaceArea() + "\n"
