@@ -41,7 +41,7 @@ public class RightCircularConeFrustum {
     }
     public void setSide(){
         // Prompt user to input side length.
-        input = JOptionPane.showInputDialog("Cube: \n" + "Enter Side Length:");
+        input = JOptionPane.showInputDialog("Right Circular Cone Frustum: \n" + "Enter Side Length:");
 
         // Convert the String input to a double.
         s = Double.parseDouble(input);
@@ -59,7 +59,7 @@ public class RightCircularConeFrustum {
 
     public void printInfo() {
 
-        JOptionPane.showMessageDialog(null, "Right Circular Cylinder: \n"
+        JOptionPane.showMessageDialog(null, "Right Circular Cone Frustum: \n"
                                           + "Minor Radius:  " + r + "\n"
                                           + "Major Radius:  " + r + "\n"
                                           + "Height:        " + h + "\n"
