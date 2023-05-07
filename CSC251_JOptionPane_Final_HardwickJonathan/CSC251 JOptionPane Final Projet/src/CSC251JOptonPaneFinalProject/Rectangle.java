@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  */
 public class Rectangle {
     private double width;
-    private double height;
+    private double length;
     private String input;
    
     public void setWidth(){
@@ -23,28 +23,28 @@ public class Rectangle {
         // Convert the String input to a double.
         width = Double.parseDouble(input);
     }
-    public void setHeight() {
+    public void setLength() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Rectangle: \n" + "Enter Height:");
+        input = JOptionPane.showInputDialog("Rectangle: \n" + "Enter Length:");
 
         // Convert the String input to a double.
-        height = Double.parseDouble(input);
+        length = Double.parseDouble(input);
     }
     
     public double getPerimeter(){
-        double perim = 2.0 * width + 2.0 * height;
+        double perim = 2.0 * width + 2.0 * length;
         return perim;
     }
    
      public double getArea() {
-        double area = width * height;
+        double area = width * length;
         return area;
     }
    
     public void printInfo() {
         JOptionPane.showMessageDialog(null, "Rectangle: \n" 
-                                          + "Base: " + width + "\n"
-                                          + "Height: " + height + "\n" 
+                                          + "Width: " + width + "\n"
+                                          + "Length: " + length + "\n" 
                                           + "Perimeter: " + getPerimeter() + "\n"
                                           + "Area: " + getArea());
    }

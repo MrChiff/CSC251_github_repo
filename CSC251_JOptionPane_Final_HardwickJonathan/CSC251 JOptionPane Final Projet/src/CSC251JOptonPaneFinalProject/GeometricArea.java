@@ -44,7 +44,8 @@ public class GeometricArea {
 
                 case "square":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
-                    // Create a triangle shape object.
+                    
+                    // Create a Square shape object.
                     Square square = new Square();
                     
                     // Pass the width to the appropriate class
@@ -63,8 +64,28 @@ public class GeometricArea {
                     
                 case "rectangle":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    
+                    // Create a Square shape object.
+                    Rectangle rect = new Rectangle();
+                    
+                    // Pass the width to the appropriate class
+                    rect.setWidth();
+                    
+                    // Pass the length to the appropriate class
+                    rect.setLength();
+
+                    // The area is calculated for a triangle.
+                    // Display area of selected shape.
+                    // Pass the width to the appropriate class
+                    rect.printInfo();
+                    
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
+                    
                 case "parallelogram":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
                     cont = false;
