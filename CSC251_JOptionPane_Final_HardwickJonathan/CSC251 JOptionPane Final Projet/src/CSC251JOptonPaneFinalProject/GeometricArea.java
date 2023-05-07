@@ -266,7 +266,7 @@ public class GeometricArea {
                 case "sphere":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
                     
-                    // Create a RightCircularCylinder shape object.
+                    // Create a Sphere shape object.
                     Sphere sphere = new Sphere();
                     
                     // Pass the width to the appropriate class
@@ -284,9 +284,28 @@ public class GeometricArea {
                     break;
                     
                 case "right circular cone":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
+                    
+                    // Create a RightCircularCone shape object.
+                    RightCircularCone rtcircone = new RightCircularCone();
+                    
+                    // Pass the width to the appropriate class
+                    rtcircone.setRadius();
+                    
+                    // Pass the height to the appropriate class
+                    rtcircone.setHeight();
+                    
+                    // The area is calculated for a triangle.
+                    // Display volumen and surface area of selected shape.
+                    rtcircone.printInfo();
+                    
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
+                    
                 case "square or rectangular pyramid":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
                     cont = false;
