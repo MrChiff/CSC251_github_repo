@@ -61,7 +61,7 @@ public class RightCircularConeFrustum {
 
         JOptionPane.showMessageDialog(null, "Right Circular Cone Frustum: \n"
                                           + "Minor Radius:  " + r + "\n"
-                                          + "Major Radius:  " + r + "\n"
+                                          + "Major Radius:  " + R + "\n"
                                           + "Height:        " + h + "\n"
                                           + "Side Length:   " + s + "\n"
                                           + "Surface Area:  " + getSurfaceArea() + "\n"

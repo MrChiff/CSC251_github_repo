@@ -51,8 +51,8 @@ public class GeometricArea {
                     // Pass the width to the appropriate class
                     square.setSide();
 
-                    // The area is calculated for a triangle.
-                    // Display area and perimeter of selected shape.
+                    /// Calculate and display area and perimeter of the
+                    // selected shape.
                     square.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -74,8 +74,8 @@ public class GeometricArea {
                     // Pass the length to the appropriate class
                     rect.setLength();
 
-                    // The area is calculated for a triangle.
-                    // Display area and perimeter of selected shape.
+                    // Calculate and display area and perimeter of the
+                    // selected shape.
                     rect.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -100,8 +100,8 @@ public class GeometricArea {
                     // Pass the height to the appropriate class
                     para.setHeight();
 
-                    // The area is calculated for a triangle.
-                    // Display area and perimeter of selected shape.
+                    // Calculate and display area and perimeter of the
+                    // selected shape.
                     para.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -132,8 +132,8 @@ public class GeometricArea {
                     // Pass the height to the appropriate class
                     trap.setHeight();
 
-                    // The area is calculated for a triangle.
-                    // Display area and perimeter of selected shape.
+                    // Calculate and display area and perimeter of the
+                    // selected shape.
                     trap.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -161,10 +161,8 @@ public class GeometricArea {
                     // Call the class to set the s2 value.
                     triangle.setSide2();
 
-                    // The area and perimeter are calculated for a triangle
-                    // inside the triangle class.
-                    
-                    // Display the calculated properties of the selected shape.
+                    // Calculate and display area and perimeter of the
+                    // selected shape.
                     triangle.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -180,11 +178,11 @@ public class GeometricArea {
                     // Create a Circle shape object.
                     Circle circle = new Circle();
                     
-                    // Pass the width to the appropriate class
+                    // Pass the radius to the appropriate class
                     circle.setRadius();
 
-                    // The area is calculated for a triangle.
-                    // Display area and perimeter of selected shape.
+                    // Calculate and display area and perimeter of the
+                    // selected shape.
                     circle.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -209,8 +207,8 @@ public class GeometricArea {
                     // Pass the height to the appropriate class
                     rectsolid.setHeight();
 
-                    // The area is calculated for a triangle.
-                    // Display volumen and surface area of selected shape.
+                    // Calculate and display volume and surface area of 
+                    // selected shape.
                     rectsolid.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -226,11 +224,11 @@ public class GeometricArea {
                     // Create a Cube shape object.
                     Cube cube = new Cube();
                     
-                    // Pass the width to the appropriate class
+                    // Pass the side length to the appropriate class
                     cube.setSide();
 
-                    // The area is calculated for a triangle.
-                    // Display volumen and surface area of selected shape.
+                    // Calculate and display volume and surface area of 
+                    // selected shape.
                     cube.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -249,11 +247,11 @@ public class GeometricArea {
                     // Pass the height to the appropriate class
                     rtcircyl.setHeight();
                     
-                    // Pass the width to the appropriate class
+                    // Pass the radius to the appropriate class
                     rtcircyl.setRadius();
                     
-                    // The area is calculated for a triangle.
-                    // Display volumen and surface area of selected shape.
+                    // Calculate and display volume and surface area of 
+                    // selected shape.
                     rtcircyl.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -269,11 +267,11 @@ public class GeometricArea {
                     // Create a Sphere shape object.
                     Sphere sphere = new Sphere();
                     
-                    // Pass the width to the appropriate class
+                    // Pass the radius to the appropriate class
                     sphere.setRadius();
                     
-                    // The area is calculated for a triangle.
-                    // Display volumen and surface area of selected shape.
+                    // Calculate and display volume and surface area of 
+                    // selected shape.
                     sphere.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -289,14 +287,14 @@ public class GeometricArea {
                     // Create a RightCircularCone shape object.
                     RightCircularCone rtcircone = new RightCircularCone();
                     
-                    // Pass the width to the appropriate class
+                    // Pass the radius to the appropriate class
                     rtcircone.setRadius();
                     
                     // Pass the height to the appropriate class
                     rtcircone.setHeight();
                     
-                    // The area is calculated for a triangle.
-                    // Display volumen and surface area of selected shape.
+                    // Calculate and display volume and surface area of 
+                    // selected shape.
                     rtcircone.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -307,12 +305,58 @@ public class GeometricArea {
                     break;
                     
                 case "square or rectangular pyramid":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
+                    
+                    // Create a RectangularPyramid shape object.
+                    RectangularPyramid pyramid = new RectangularPyramid();
+                    
+                    // Pass the width to the appropriate class
+                    pyramid.setWidth();
+                    
+                    // Pass the height to the appropriate class
+                    pyramid.setHeight();
+                    
+                    // Pass the length to the appropriate class
+                    pyramid.setLength();
+                    
+                    // Calculate and display volume and surface area of 
+                    // selected shape.
+                    pyramid.printInfo();
+                    
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
+                    
                 case "right circular cone frustum":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
+                    
+                    // Create a RightCircularCone shape object.
+                    RightCircularConeFrustum truncCone = new RightCircularConeFrustum();
+                    
+                    // Pass the minor radius to the appropriate class
+                    truncCone.setMinorRadius();
+                    
+                    // Pass the major radius to the appropriate class
+                    truncCone.setMajorRadius();
+                    
+                    // Pass the height to the appropriate class
+                    truncCone.setHeight();
+                    
+                    // Pass the slant length to the appropriate class
+                    truncCone.setSide();
+                    
+                    // Calculate and display volume and surface area of the
+                    // selected shape.
+                    truncCone.printInfo();
+                    
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
 
                 default:
