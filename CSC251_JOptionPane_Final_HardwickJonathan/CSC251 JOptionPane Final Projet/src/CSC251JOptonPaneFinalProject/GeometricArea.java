@@ -43,7 +43,7 @@ public class GeometricArea {
             switch (shapeInput) {
 
                 case "square":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
                     
                     // Create a Square shape object.
                     Square square = new Square();
@@ -52,7 +52,7 @@ public class GeometricArea {
                     square.setSide();
 
                     // The area is calculated for a triangle.
-                    // Display area of selected shape.
+                    // Display area and perimeter of selected shape.
                     square.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -63,9 +63,9 @@ public class GeometricArea {
                     break;
                     
                 case "rectangle":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
                     
-                    // Create a Square shape object.
+                    // Create a Rectangle shape object.
                     Rectangle rect = new Rectangle();
                     
                     // Pass the width to the appropriate class
@@ -75,8 +75,7 @@ public class GeometricArea {
                     rect.setLength();
 
                     // The area is calculated for a triangle.
-                    // Display area of selected shape.
-                    // Pass the width to the appropriate class
+                    // Display area and perimeter of selected shape.
                     rect.printInfo();
                     
                     // Since the user entered a valid shape type the loop does 
@@ -87,14 +86,65 @@ public class GeometricArea {
                     break;
                     
                 case "parallelogram":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
+                    
+                    // Create a Parallelogram shape object.
+                    Parallelogram para = new Parallelogram();
+                    
+                    // Pass the width to the appropriate class
+                    para.setWidth();
+                    
+                    // Pass the length to the appropriate class
+                    para.setLength();
+                    
+                    // Pass the height to the appropriate class
+                    para.setHeight();
+
+                    // The area is calculated for a triangle.
+                    // Display area and perimeter of selected shape.
+                    para.printInfo();
+                    
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
+                    
                 case "trapezoid":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
+                    
+                    // Create a Parallelogram shape object.
+                    Trapezoid trap = new Trapezoid();
+                    
+                    // Pass the width to the appropriate class
+                    trap.setBase1();
+                    
+                    // Pass the length to the appropriate class
+                    trap.setBase2();
+                    
+                    // Pass the height to the appropriate class
+                    trap.setSide1();
+                    
+                    // Pass the height to the appropriate class
+                    trap.setSide2();
+                    
+                    // Pass the height to the appropriate class
+                    trap.setHeight();
+
+                    // The area is calculated for a triangle.
+                    // Display area and perimeter of selected shape.
+                    trap.printInfo();
+                    
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
+                    
                 case "triangle":
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
                     
                     // Create a triangle shape object.
                     Triangle triangle = new Triangle();
@@ -125,9 +175,25 @@ public class GeometricArea {
                     break;
                     
                 case "circle":
-                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
+                    JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput.toUpperCase());
+                    
+                    // Create a Square shape object.
+                    Circle circle = new Circle();
+                    
+                    // Pass the width to the appropriate class
+                    circle.setRadius();
+
+                    // The area is calculated for a triangle.
+                    // Display area and perimeter of selected shape.
+                    circle.printInfo();
+                    
+                    // Since the user entered a valid shape type the loop does 
+                    // not need to continue.
                     cont = false;
+                    
+                    // Break out of the switch statement.
                     break;
+                    
                 case "rectangular solid":
                     JOptionPane.showMessageDialog(null, "Shape:  " + shapeInput);
                     cont = false;
