@@ -49,8 +49,8 @@ public class Cube {
         
         JOptionPane.showMessageDialog(null, "Side Length:   " + String.format("%.2f",(s)) + "\n"
                                           + "Survace Area:  " + String.format("%.2f",(getSurfaceArea())) + "\n" 
-                                          + "Volume:        " + String.format("%.2f",(getVolume())), "Cube:",
-                                          JOptionPane.INFORMATION_MESSAGE, icon);
+                                          + "Volume:        " + String.format("%.2f",(getVolume())), 
+                                          "Cube:", JOptionPane.INFORMATION_MESSAGE, icon);
     }
     
 }

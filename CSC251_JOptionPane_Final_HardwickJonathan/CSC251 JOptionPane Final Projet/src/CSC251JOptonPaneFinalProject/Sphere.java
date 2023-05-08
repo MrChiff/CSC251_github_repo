@@ -5,8 +5,9 @@
  */
 package CSC251JOptonPaneFinalProject;
 
-import static CSC251JOptonPaneFinalProject.Triangle.icon;
+import java.awt.Font;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /*
@@ -17,14 +18,22 @@ import javax.swing.JOptionPane;
 public class Sphere {
     private double r;   // radius
     private String input;
-    static ImageIcon icon = new ImageIcon("parallelogram.png");
+    static ImageIcon icon = new ImageIcon("sphere.png");
+
+    public String userInput(JLabel label){
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Sphere:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
+        
+        return input;
+    }
 
     public void setRadius() {
         // Prompt user to input radius.
-        input = JOptionPane.showInputDialog("Sphere: \n" + "Enter Radius:");
+        JLabel label = new JLabel("Enter Radius:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        r = Double.parseDouble(input);
+        r = Double.parseDouble(userInput(label));
     }
 
     public double getSurfaceArea() {
@@ -40,10 +49,9 @@ public class Sphere {
 
     public void printInfo() {
 
-        JOptionPane.showMessageDialog(null, "Sphere: \n"
-                                          + "Radius:     " + r + "\n"
-                                          + "Surface Area: " + getSurfaceArea() + "\n"
-                                          + "Volume:      " + getVolume(),"Triangle",
+        JOptionPane.showMessageDialog(null, "Radius:     " + String.format("%.2f",(r)) + "\n"
+                                          + "Surface Area: " + String.format("%.2f",(getSurfaceArea())) + "\n"
+                                          + "Volume:      " + String.format("%.2f",(getVolume())),"Sphere:",
                                           JOptionPane.INFORMATION_MESSAGE, icon);
     }
 }
