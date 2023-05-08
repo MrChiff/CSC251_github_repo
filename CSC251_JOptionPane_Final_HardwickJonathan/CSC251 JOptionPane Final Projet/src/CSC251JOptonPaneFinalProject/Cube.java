@@ -5,8 +5,9 @@
  */
 package CSC251JOptonPaneFinalProject;
 
-import static CSC251JOptonPaneFinalProject.Triangle.icon;
+import java.awt.Font;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /*
@@ -17,14 +18,21 @@ import javax.swing.JOptionPane;
 public class Cube {
     private double s;
     private String input;
-    static ImageIcon icon = new ImageIcon("parallelogram.png");
+    static ImageIcon icon = new ImageIcon("cube.png");
    
-    public void setSide(){
+    public String userInput(JLabel label){
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Cube:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
+        
+        return input;
+    }
+    public void setSide() {
         // Prompt user to input side length.
-        input = JOptionPane.showInputDialog("Cube: \n" + "Enter Side Length:");
+        JLabel label = new JLabel("Enter Side Length:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        s = Double.parseDouble(input);
+        s = Double.parseDouble(userInput(label));
     }
     
     public double getSurfaceArea(){
@@ -39,10 +47,9 @@ public class Cube {
    
     public void printInfo() {
         
-        JOptionPane.showMessageDialog(null, "Cube: \n" 
-                                          + "Side Length:  " + s + "\n"
-                                          + "Perimeter:    " + getSurfaceArea() + "\n" 
-                                          + "Area:         " + getVolume(),"Triangle",
+        JOptionPane.showMessageDialog(null, "Side Length:   " + String.format("%.2f",(s)) + "\n"
+                                          + "Survace Area:  " + String.format("%.2f",(getSurfaceArea())) + "\n" 
+                                          + "Volume:        " + String.format("%.2f",(getVolume())), "Cube:",
                                           JOptionPane.INFORMATION_MESSAGE, icon);
     }
     
