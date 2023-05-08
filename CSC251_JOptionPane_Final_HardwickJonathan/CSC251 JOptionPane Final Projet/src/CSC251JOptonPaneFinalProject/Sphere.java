@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 package CSC251JOptonPaneFinalProject;
 
@@ -10,11 +10,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-/*
- * CSC 251 JOptionPane Final Project
- * Jonathan Hardwick
- * 2023/05/07
- */
 public class Sphere {
     private double r;   // radius
     private String input;
@@ -51,7 +46,7 @@ public class Sphere {
 
         JOptionPane.showMessageDialog(null, "Radius:     " + String.format("%.2f",(r)) + "\n"
                                           + "Surface Area: " + String.format("%.2f",(getSurfaceArea())) + "\n"
-                                          + "Volume:      " + String.format("%.2f",(getVolume())),"Sphere:",
-                                          JOptionPane.INFORMATION_MESSAGE, icon);
+                                          + "Volume:      " + String.format("%.2f",(getVolume())),
+                                          "Sphere:",JOptionPane.INFORMATION_MESSAGE, icon);
     }
 }

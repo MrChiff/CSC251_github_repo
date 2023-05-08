@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 package CSC251JOptonPaneFinalProject;
 
@@ -10,19 +10,14 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-/*
- * CSC 251 JOptionPane Final Project
- * Jonathan Hardwick
- * 2023/05/07
- */
 public class RightCircularCone {
     private double r;   // radius
     private double h;   // height
     private String input;
-    static ImageIcon icon = new ImageIcon("rightCircularCylinder.png");
+    static ImageIcon icon = new ImageIcon("rightCircularCone.png");
 
     public String userInput(JLabel label){
-        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Right Circular Cylinder:",
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Right Circular Cone:",
                 JOptionPane.INFORMATION_MESSAGE, icon, null,""));
         
         return input;
@@ -61,6 +56,6 @@ public class RightCircularCone {
                                           + "Height:     " + String.format("%.2f",(h)) + "\n"
                                           + "Surface Area: " + String.format("%.2f",(getSurfaceArea())) + "\n"
                                           + "Volume:      " + String.format("%.2f",(getVolume())),
-                                          "Right Circular Cone", JOptionPane.INFORMATION_MESSAGE, icon);
+                                          "Right Circular Cone:", JOptionPane.INFORMATION_MESSAGE, icon);
     }
 }

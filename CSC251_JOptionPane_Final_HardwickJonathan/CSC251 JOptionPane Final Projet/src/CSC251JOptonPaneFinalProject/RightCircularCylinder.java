@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 package CSC251JOptonPaneFinalProject;
 
@@ -9,12 +9,6 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
-/*
- * CSC 251 JOptionPane Final Project
- * Jonathan Hardwick
- * 2023/05/07
- */
 
 public class RightCircularCylinder {
     private double r;   // radius
@@ -62,7 +56,7 @@ public class RightCircularCylinder {
                                           + "Height:     " + String.format("%.2f",(h)) + "\n"
                                           + "Surface Area: " + String.format("%.2f",(getSurfaceArea())) + "\n"
                                           + "Volume:      " + String.format("%.2f",(getVolume())),
-                                          "Right Circular Cylinder", JOptionPane.INFORMATION_MESSAGE, icon);
+                                          "Right Circular Cylinder:", JOptionPane.INFORMATION_MESSAGE, icon);
     }
     
 }

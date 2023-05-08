@@ -1,33 +1,32 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package CSC251JOptonPaneFinalProject;
-
-
-import javax.swing.*;
-import java.awt.*;
-
-/*
  * CSC 251 JOptionPane Final Project
  * Jonathan Hardwick
  * 2023/05/07
  */
+package CSC251JOptonPaneFinalProject;
+
+import javax.swing.*;
+import java.awt.*;
+
+
 public class Square {
     private double s;
     private String input;
-    static ImageIcon icon = new ImageIcon("square1.png");
-   
+    static ImageIcon icon = new ImageIcon("square.png");
+    
+    public String userInput(JLabel label){
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Square:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
+        
+        return input;
+    }
     public void setSide(){
         // Prompt user to input side length.
         JLabel label = new JLabel("Enter Side Length:");
         label.setFont(new Font("Arial", Font.BOLD, 18));
-        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Square:",
-                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
-        s = Double.parseDouble(input);
+        s = Double.parseDouble(userInput(label));
     }
     
     public double getPerimeter(){

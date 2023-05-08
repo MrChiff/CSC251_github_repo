@@ -1,22 +1,15 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 package CSC251JOptonPaneFinalProject;
 
-import static CSC251JOptonPaneFinalProject.Circle.icon;
-import static CSC251JOptonPaneFinalProject.Rectangle.icon;
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-/*
- * CSC 251 JOptionPane Final Project
- * Jonathan Hardwick
- * 2023/05/07
- */
 public class Parallelogram {
 
     private double width;
@@ -31,7 +24,6 @@ public class Parallelogram {
         
         return input;
     }
-
     public void setWidth() {
         // Prompt user to input width.
         JLabel label = new JLabel("Enter Width:");
@@ -70,11 +62,11 @@ public class Parallelogram {
     }
 
     public void printInfo() {
-        JOptionPane.showMessageDialog(null, "Base:      " + width + "\n"
-                                          + "Height:    " + height + "\n"
-                                          + "Length:    " + length + "\n"
-                                          + "Perimeter: " + getPerimeter() + "\n"
-                                          + "Area:      " + getArea(),"Parallelogram",
-                                          JOptionPane.INFORMATION_MESSAGE, icon);
+        JOptionPane.showMessageDialog(null, "Width:      " + String.format("%.2f",(width)) + "\n"
+                                          + "Height:    " + String.format("%.2f",(height)) + "\n"
+                                          + "Length:    " + String.format("%.2f",(length)) + "\n"
+                                          + "Perimeter: " + String.format("%.2f",(getPerimeter())) + "\n"
+                                          + "Area:      " + String.format("%.2f",(getArea())),
+                                          "Parallelogram:", JOptionPane.INFORMATION_MESSAGE, icon);
     }
 }

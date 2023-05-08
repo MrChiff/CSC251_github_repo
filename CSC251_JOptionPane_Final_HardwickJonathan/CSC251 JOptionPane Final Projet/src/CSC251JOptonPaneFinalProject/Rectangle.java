@@ -1,46 +1,43 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 package CSC251JOptonPaneFinalProject;
 
-import static CSC251JOptonPaneFinalProject.Square.icon;
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-/*
- * CSC 251 JOptionPane Final Project
- * Jonathan Hardwick
- * 2023/05/07
- */
 public class Rectangle {
     private double width;
     private double length;
     private String input;
     static ImageIcon icon = new ImageIcon("rectangle.png");
     
+    public String userInput(JLabel label){
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Rectangle:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
+        
+        return input;
+    }
+    
     public void setWidth(){
         // Prompt user to input width.
         JLabel label = new JLabel("Enter Width:");
         label.setFont(new Font("Arial", Font.BOLD, 18));
-        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Rectangle:",
-                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
-        width = Double.parseDouble(input);
+        width = Double.parseDouble(userInput(label));
     }
     public void setLength() {
         // Prompt user to input height.
         JLabel label = new JLabel("Enter Height:");
         label.setFont(new Font("Arial", Font.BOLD, 18));
-        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Rectangle:",
-                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
         
         // Convert the String input to a double.
-        length = Double.parseDouble(input);
+        length = Double.parseDouble(userInput(label));
     }
     
     public double getPerimeter(){
@@ -54,10 +51,10 @@ public class Rectangle {
     }
    
     public void printInfo() {
-        JOptionPane.showMessageDialog(null, "Width: " + width + "\n"
-                                          + "Length: " + length + "\n" 
-                                          + "Perimeter: " + getPerimeter() + "\n"
-                                          + "Area: " + getArea(),"Rectangle",
-                                          JOptionPane.INFORMATION_MESSAGE, icon);
+        JOptionPane.showMessageDialog(null, "Width: " + String.format("%.2f",(width)) + "\n"
+                                          + "Length: " + String.format("%.2f",(length)) + "\n" 
+                                          + "Perimeter: " + String.format("%.2f",(getPerimeter())) + "\n"
+                                          + "Area: " + String.format("%.2f",(getArea())),
+                                          "Rectangle:",JOptionPane.INFORMATION_MESSAGE, icon);
    }
 }

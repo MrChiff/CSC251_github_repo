@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 package CSC251JOptonPaneFinalProject;
 
@@ -10,11 +10,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-/*
- * CSC 251 JOptionPane Final Project
- * Jonathan Hardwick
- * 2023/05/07
- */
 public class Trapezoid {
 
     private double b1;      // base 1
@@ -88,13 +83,13 @@ public class Trapezoid {
     }
 
     public void printInfo() {
-        JOptionPane.showMessageDialog(null, "Base 1:    " + b1 + "\n"
-                                          + "Base 2:    " + b2 + "\n"
-                                          + "Height:    " + height + "\n"
-                                          + "Side 1:    " + s1 + "\n"
-                                          + "Side 2:    " + s2 + "\n"
-                                          + "Perimeter: " + getPerimeter() + "\n"
-                                          + "Area:      " + getArea(),"Trapezoid",
-                                          JOptionPane.INFORMATION_MESSAGE, icon);
+        JOptionPane.showMessageDialog(null, "Base 1:    " + String.format("%.2f",(b1)) + "\n"
+                                          + "Base 2:    " + String.format("%.2f",(b2)) + "\n"
+                                          + "Height:    " + String.format("%.2f",(height)) + "\n"
+                                          + "Side 1:    " + String.format("%.2f",(s1)) + "\n"
+                                          + "Side 2:    " + String.format("%.2f",(s2)) + "\n"
+                                          + "Perimeter: " + String.format("%.2f",(getPerimeter())) + "\n"
+                                          + "Area:      " + String.format("%.2f",(getArea())),
+                                          "Trapezoid:", JOptionPane.INFORMATION_MESSAGE, icon);
     }
 }

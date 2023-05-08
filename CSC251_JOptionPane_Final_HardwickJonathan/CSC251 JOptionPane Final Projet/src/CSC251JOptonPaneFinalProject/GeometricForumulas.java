@@ -1,11 +1,10 @@
-package CSC251JOptonPaneFinalProject;
-
 /*
  * CSC 251 JOptionPane Final Project
  * Jonathan Hardwick
  * 2023/05/07
  */
-import java.util.*;
+package CSC251JOptonPaneFinalProject;
+
 import javax.swing.*;
 import javax.swing.ImageIcon;
 
@@ -349,7 +348,8 @@ public class GeometricForumulas {
                     break;
 
                 default:
-                    JOptionPane.showMessageDialog(null, shapeInput + " is not a valid shape.");
+                    JOptionPane.showMessageDialog(null, shapeInput + 
+                            " is not a valid shape.");
                     shapeInput = getShapeType();
                     break;
             }

@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 package CSC251JOptonPaneFinalProject;
 
@@ -10,11 +10,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-/*
- * CSC 251 JOptionPane Final Project
- * Jonathan Hardwick
- * 2023/05/07
- */
 public class RectangularSolid {
     private double width;
     private double height;
@@ -36,7 +31,6 @@ public class RectangularSolid {
         // Convert the String input to a double.
         width = Double.parseDouble(userInput(label));
     }
-
     public void setHeight() {
         // Prompt user to input height.
         JLabel label = new JLabel("Enter Height:");
@@ -45,7 +39,6 @@ public class RectangularSolid {
         // Convert the String input to a double.
         height = Double.parseDouble(userInput(label));
     }
-
     public void setLength() {
         // Prompt user to input length.
         JLabel label = new JLabel("Enter Length:");
@@ -64,13 +57,12 @@ public class RectangularSolid {
         double volume = width * height * length;
         return volume;
     }
-   
     public void printInfo() {
         JOptionPane.showMessageDialog(null, "Width: " + String.format("%.2f",(width)) + "\n"
                                           + "Height: " + String.format("%.2f",(height)) + "\n" 
                                           + "Length: " + String.format("%.2f",(length)) + "\n" 
                                           + "Surface Area: " + String.format("%.2f",(getSurfaceArea())) + "\n"
                                           + "Volume: " + String.format("%.2f",(getVolume())),
-                                          "Rectangular Solid", JOptionPane.INFORMATION_MESSAGE, icon);
+                                          "Rectangular Solid:", JOptionPane.INFORMATION_MESSAGE, icon);
    }
 }

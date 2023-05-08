@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 package CSC251JOptonPaneFinalProject;
 
@@ -10,11 +10,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-/*
- * CSC 251 JOptionPane Final Project
- * Jonathan Hardwick
- * 2023/05/07
- */
 public class Triangle {
 
     private double width;
@@ -79,13 +74,13 @@ public class Triangle {
 
     public void printInfo() {
         
-        JOptionPane.showMessageDialog(null, "Base: " + width + "\n"
-                                          + "Height: " + height + "\n" 
-                                          + "S1: " + s1 + "\n" 
-                                          + "S2: " + s2 + "\n" 
-                                          + "Perimeter: " + getPerimeter() + "\n" 
-                                          + "Area: " + getArea(),"Triangle",
-                                          JOptionPane.INFORMATION_MESSAGE, icon);
+        JOptionPane.showMessageDialog(null, "Base: " + String.format("%.2f",(width)) + "\n"
+                                          + "Height: " + String.format("%.2f",(height)) + "\n" 
+                                          + "S1: " + String.format("%.2f",(s1)) + "\n" 
+                                          + "S2: " + String.format("%.2f",(s2)) + "\n" 
+                                          + "Perimeter: " + String.format("%.2f",(getPerimeter())) + "\n" 
+                                          + "Area: " + String.format("%.2f",(getArea())),
+                                          "Triangle:", JOptionPane.INFORMATION_MESSAGE, icon);
     }
     
 }
