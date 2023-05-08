@@ -38,6 +38,7 @@ public class Rectangle {
         label.setFont(new Font("Arial", Font.BOLD, 18));
         input = String.valueOf(JOptionPane.showInputDialog(null, label, "Rectangle:",
                 JOptionPane.INFORMATION_MESSAGE, icon, null,""));
+        
         // Convert the String input to a double.
         length = Double.parseDouble(input);
     }
