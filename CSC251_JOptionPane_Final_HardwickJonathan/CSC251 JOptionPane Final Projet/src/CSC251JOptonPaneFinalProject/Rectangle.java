@@ -5,6 +5,8 @@
  */
 package CSC251JOptonPaneFinalProject;
 
+import static CSC251JOptonPaneFinalProject.Square.icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,17 +17,21 @@ public class Rectangle {
     private double width;
     private double length;
     private String input;
-   
+    static ImageIcon icon = new ImageIcon("rectangle.png");
+    private String text;
+    
     public void setWidth(){
         // Prompt user to input width.
-        input = JOptionPane.showInputDialog("Rectangle: \n" + "Enter Width:");
+        input = String.valueOf(JOptionPane.showInputDialog(null, "Enter Width:", "Rectangle:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
         width = Double.parseDouble(input);
     }
     public void setLength() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Rectangle: \n" + "Enter Length:");
+        input = String.valueOf(JOptionPane.showInputDialog(null, "Enter Height:", "Rectangle:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
         length = Double.parseDouble(input);
@@ -42,10 +48,10 @@ public class Rectangle {
     }
    
     public void printInfo() {
-        JOptionPane.showMessageDialog(null, "Rectangle: \n" 
-                                          + "Width: " + width + "\n"
+        JOptionPane.showMessageDialog(null, "Width: " + width + "\n"
                                           + "Length: " + length + "\n" 
                                           + "Perimeter: " + getPerimeter() + "\n"
-                                          + "Area: " + getArea());
+                                          + "Area: " + getArea(),"Rectangle",
+                                          JOptionPane.INFORMATION_MESSAGE, icon);
    }
 }

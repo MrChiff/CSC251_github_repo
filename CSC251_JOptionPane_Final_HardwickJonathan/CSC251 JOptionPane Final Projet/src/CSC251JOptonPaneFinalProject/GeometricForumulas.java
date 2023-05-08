@@ -22,12 +22,11 @@ public class GeometricForumulas {
         int shapeType = -1;
         Object userInput;
         
-        String categories[] ={"Choose a shape:",
-                            "1. Square",          "2. Rectangle",            "3. Parallelogram", 
-                            "4. Trapezoid",         "5. Triangle",             "6. Circle",
-                            "7. Rectangular Solid", "8. Cube",                 "9. Right Circular Cylinder",
-                            "10. Sphere",           "11. Right Circular Cone", "12. Square or Rectangular Pyramid",
-                            "13. Right Circular Cone Frustum"};
+        String categories[] ={"Choose a shape:","Square","Rectangle", "Parallelogram", 
+                            "Trapezoid","Triangle","Circle","Rectangular Solid", 
+                            "Cube","Right Circular Cylinder", "Sphere",
+                            "Right Circular Cone", "Square or Rectangular Pyramid",
+                            "Right Circular Cone Frustum"};
         
         userInput = JOptionPane.showInputDialog(null,icon,
                 "Geometric Formulas", JOptionPane.QUESTION_MESSAGE, null, 
@@ -61,8 +60,6 @@ public class GeometricForumulas {
 
                 case 1:
                     // Square
-                    JOptionPane.showMessageDialog(null, "Shape:  Square");
-                    
                     // Create a Square shape object.
                     Square square = new Square();
                     
@@ -82,8 +79,6 @@ public class GeometricForumulas {
                     
                 case 2:
                     // rectangle
-                    JOptionPane.showMessageDialog(null, "Shape:  Rectangle");
-                    
                     // Create a Rectangle shape object.
                     Rectangle rect = new Rectangle();
                     
@@ -106,8 +101,6 @@ public class GeometricForumulas {
                     
                 case 3:
                     // parallelogram
-                    JOptionPane.showMessageDialog(null, "Shape:  Parallelogram");
-                    
                     // Create a Parallelogram shape object.
                     Parallelogram para = new Parallelogram();
                     
@@ -133,8 +126,6 @@ public class GeometricForumulas {
                     
                 case 4:
                     // trapezoid
-                    JOptionPane.showMessageDialog(null, "Shape:  Trapezoid");
-                    
                     // Create a Trapezoid shape object.
                     Trapezoid trap = new Trapezoid();
                     
@@ -165,8 +156,7 @@ public class GeometricForumulas {
                     break;
                     
                 case 5:
-                    JOptionPane.showMessageDialog(null, "Shape:  Triangle");
-                    
+                    // triangle
                     // Create a triangle shape object.
                     Triangle triangle = new Triangle();
                     
@@ -194,8 +184,7 @@ public class GeometricForumulas {
                     break;
                     
                 case 6:
-                    JOptionPane.showMessageDialog(null, "Shape:  Circle");
-                    
+                    // Circle
                     // Create a Circle shape object.
                     Circle circle = new Circle();
                     
@@ -213,9 +202,7 @@ public class GeometricForumulas {
                     // Break out of the switch statement.
                     break;
                     
-                case 7:
-                    JOptionPane.showMessageDialog(null, "Shape:  Rectangular Solid");
-                    
+                case 7: // Rectangular Solid
                     // Create a RectangularSolid shape object.
                     RectangularSolid rectsolid = new RectangularSolid();
                     
@@ -239,9 +226,7 @@ public class GeometricForumulas {
                     // Break out of the switch statement.
                     break;
                     
-                case 8:
-                    JOptionPane.showMessageDialog(null, "Shape:  Cube");
-                    
+                case 8: // Cube
                     // Create a Cube shape object.
                     Cube cube = new Cube();
                     
@@ -259,9 +244,7 @@ public class GeometricForumulas {
                     // Break out of the switch statement.
                     break;
                     
-                case 9:
-                    JOptionPane.showMessageDialog(null, "Shape:  Right Circular Cylinder");
-                    
+                case 9: // Right Circular Cylinder
                     // Create a RightCircularCylinder shape object.
                     RightCircularCylinder rtcircyl = new RightCircularCylinder();
                     
@@ -282,9 +265,7 @@ public class GeometricForumulas {
                     // Break out of the switch statement.
                     break;
                     
-                case 10:
-                    JOptionPane.showMessageDialog(null, "Shape:  Sphere");
-                    
+                case 10: // Sphere
                     // Create a Sphere shape object.
                     Sphere sphere = new Sphere();
                     
@@ -302,9 +283,7 @@ public class GeometricForumulas {
                     // Break out of the switch statement.
                     break;
                     
-                case 11:
-                    JOptionPane.showMessageDialog(null, "Shape:  Right Circular Cone");
-                    
+                case 11: // Right Circular Cone
                     // Create a RightCircularCone shape object.
                     RightCircularCone rtcircone = new RightCircularCone();
                     
@@ -325,9 +304,7 @@ public class GeometricForumulas {
                     // Break out of the switch statement.
                     break;
                     
-                case 12:
-                    JOptionPane.showMessageDialog(null, "Shape:  Square or Rectangular Pyramid");
-                    
+                case 12: // Square or Rectangular Pyramid
                     // Create a RectangularPyramid shape object.
                     RectangularPyramid pyramid = new RectangularPyramid();
                     
@@ -351,9 +328,7 @@ public class GeometricForumulas {
                     // Break out of the switch statement.
                     break;
                     
-                case 13:
-                    JOptionPane.showMessageDialog(null, "Shape:  Right Circular Cone Frustum");
-                    
+                case 13: // Right Circular Cone Frustum
                     // Create a RightCircularCone shape object.
                     RightCircularConeFrustum truncCone = new RightCircularConeFrustum();
                     
