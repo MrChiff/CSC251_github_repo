@@ -5,8 +5,9 @@
  */
 package CSC251JOptonPaneFinalProject;
 
-import static CSC251JOptonPaneFinalProject.Triangle.icon;
+import java.awt.Font;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /*
@@ -19,41 +20,50 @@ public class RectangularPyramid {
     private double width;
     private double height;
     private double length;
-    static ImageIcon icon = new ImageIcon("parallelogram.png");
+    static ImageIcon icon = new ImageIcon("rectangularPyramid.png");
     
+    public String userInput(JLabel label){
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Rectangular Pyramid:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
+        
+        return input;
+    }
     public void setWidth() {
         // Prompt user to input width.
-        input = JOptionPane.showInputDialog("Rectanglar Pyramid: \n" + "Enter Width:");
+        JLabel label = new JLabel("Enter Width:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        width = Double.parseDouble(input);
+        width = Double.parseDouble(userInput(label));
     }
+
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Rectanglar Pyramid: \n" + "Enter Height:");
+        JLabel label = new JLabel("Enter Height:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        height = Double.parseDouble(input);
+        height = Double.parseDouble(userInput(label));
     }
+
     public void setLength() {
         // Prompt user to input length.
-        input = JOptionPane.showInputDialog("Rectanglar Pyramid: \n" + "Enter Length:");
+        JLabel label = new JLabel("Enter Length:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        length = Double.parseDouble(input);
+        length = Double.parseDouble(userInput(label));
     }
     public double getVolume() {
         double volume = (1.0/3.0) * width * height * length;
         return volume;
     }
-   
     public void printInfo() {
-        JOptionPane.showMessageDialog(null, "Rectanglar Pyramid: \n" 
-                                          + "Width: " + width + "\n"
-                                          + "Height: " + height + "\n" 
-                                          + "Length: " + length + "\n"
-                                          + "Volume: " + getVolume(),"Triangle",
-                                          JOptionPane.INFORMATION_MESSAGE, icon);
+        JOptionPane.showMessageDialog(null, "Width: " + String.format("%.2f",(width)) + "\n"
+                                          + "Height: " + String.format("%.2f",(height)) + "\n" 
+                                          + "Length: " + String.format("%.2f",(length)) + "\n"
+                                          + "Volume: " + String.format("%.2f",(getVolume())),
+                                          "Rectangular Pyramid:", JOptionPane.INFORMATION_MESSAGE, icon);
    }
     
 }
