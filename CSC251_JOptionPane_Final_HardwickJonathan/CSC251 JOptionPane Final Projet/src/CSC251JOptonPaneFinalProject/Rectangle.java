@@ -20,7 +20,6 @@ public class Rectangle {
     private double length;
     private String input;
     static ImageIcon icon = new ImageIcon("rectangle.png");
-    private String text;
     
     public void setWidth(){
         // Prompt user to input width.

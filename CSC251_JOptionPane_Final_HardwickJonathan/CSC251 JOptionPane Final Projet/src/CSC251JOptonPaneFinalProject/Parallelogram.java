@@ -5,6 +5,10 @@
  */
 package CSC251JOptonPaneFinalProject;
 
+import static CSC251JOptonPaneFinalProject.Rectangle.icon;
+import java.awt.Font;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,10 +21,14 @@ public class Parallelogram {
     private double height;
     private double length;
     private String input;
+    static ImageIcon icon = new ImageIcon("parallelogram.png");
 
     public void setWidth() {
         // Prompt user to input width.
-        input = JOptionPane.showInputDialog("Parallelogram: \n" + "Enter Width:");
+        JLabel label = new JLabel("Enter Width:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Parallelogram:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
         width = Double.parseDouble(input);
@@ -28,7 +36,10 @@ public class Parallelogram {
 
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Parallelogram: \n" + "Enter Height:");
+        JLabel label = new JLabel("Enter Height:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Parallelogram:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
         height = Double.parseDouble(input);
@@ -36,7 +47,10 @@ public class Parallelogram {
 
     public void setLength() {
         // Prompt user to input length.
-        input = JOptionPane.showInputDialog("Parallelogram: \n" + "Enter Length:");
+        JLabel label = new JLabel("Enter Length:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Parallelogram:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
         length = Double.parseDouble(input);
@@ -53,11 +67,11 @@ public class Parallelogram {
     }
 
     public void printInfo() {
-        JOptionPane.showMessageDialog(null, "Parallelogram: \n"
-                                          + "Base:      " + width + "\n"
+        JOptionPane.showMessageDialog(null, "Base:      " + width + "\n"
                                           + "Height:    " + height + "\n"
                                           + "Length:    " + length + "\n"
                                           + "Perimeter: " + getPerimeter() + "\n"
-                                          + "Area:      " + getArea());
+                                          + "Area:      " + getArea(),"Parallelogram",
+                                          JOptionPane.INFORMATION_MESSAGE, icon);
     }
 }
