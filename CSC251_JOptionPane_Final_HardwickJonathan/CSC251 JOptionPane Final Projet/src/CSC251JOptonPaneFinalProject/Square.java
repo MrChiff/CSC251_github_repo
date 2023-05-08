@@ -9,9 +9,10 @@ package CSC251JOptonPaneFinalProject;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- *
- * @author mr.chiff
+/*
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 public class Square {
     private double s;

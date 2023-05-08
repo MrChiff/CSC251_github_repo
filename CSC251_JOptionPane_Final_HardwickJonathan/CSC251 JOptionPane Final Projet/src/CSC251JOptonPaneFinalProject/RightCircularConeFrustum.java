@@ -5,18 +5,22 @@
  */
 package CSC251JOptonPaneFinalProject;
 
+import static CSC251JOptonPaneFinalProject.Triangle.icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Jonathan
+/*
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 public class RightCircularConeFrustum {
     private double r;   // minor radius
     private double R;   // major radius
     private double h;   // height
-    private double s;   // side length
+    private double s;   // slant length
     private String input;
+    static ImageIcon icon = new ImageIcon("parallelogram.png");
 
     public void setMinorRadius() {
         // Prompt user to input radius.
@@ -65,7 +69,8 @@ public class RightCircularConeFrustum {
                                           + "Height:        " + h + "\n"
                                           + "Side Length:   " + s + "\n"
                                           + "Surface Area:  " + getSurfaceArea() + "\n"
-                                          + "Volume:        " + getVolume());
+                                          + "Volume:        " + getVolume(),"Triangle",
+                                          JOptionPane.INFORMATION_MESSAGE, icon);
     }
     
 }

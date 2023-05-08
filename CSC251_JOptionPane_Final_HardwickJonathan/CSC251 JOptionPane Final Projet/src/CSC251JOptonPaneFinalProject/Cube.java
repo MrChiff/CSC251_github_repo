@@ -5,15 +5,19 @@
  */
 package CSC251JOptonPaneFinalProject;
 
+import static CSC251JOptonPaneFinalProject.Triangle.icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Jonathan
+/*
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 public class Cube {
     private double s;
     private String input;
+    static ImageIcon icon = new ImageIcon("parallelogram.png");
    
     public void setSide(){
         // Prompt user to input side length.
@@ -38,7 +42,8 @@ public class Cube {
         JOptionPane.showMessageDialog(null, "Cube: \n" 
                                           + "Side Length:  " + s + "\n"
                                           + "Perimeter:    " + getSurfaceArea() + "\n" 
-                                          + "Area:         " + getVolume());
+                                          + "Area:         " + getVolume(),"Triangle",
+                                          JOptionPane.INFORMATION_MESSAGE, icon);
     }
     
 }

@@ -5,16 +5,20 @@
  */
 package CSC251JOptonPaneFinalProject;
 
+import static CSC251JOptonPaneFinalProject.Triangle.icon;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Jonathan
+/*
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 public class Circle {
 
     private double r;       // radius
     private String input;   // user input
+    static ImageIcon icon = new ImageIcon("parallelogram.png");
 
     public void setRadius() {
         // Prompt user to input radius.
@@ -40,6 +44,7 @@ public class Circle {
         JOptionPane.showMessageDialog(null, "Circle: \n"
                                           + "Radius:     " + r + "\n"
                                           + "Circumference: " + getCircumference() + "\n"
-                                          + "Area:      " + getArea());
+                                          + "Area:      " + getArea(),"Triangle",
+                                          JOptionPane.INFORMATION_MESSAGE, icon);
     }
 }

@@ -5,11 +5,16 @@
  */
 package CSC251JOptonPaneFinalProject;
 
+import static CSC251JOptonPaneFinalProject.Parallelogram.icon;
+import java.awt.Font;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Jonathan
+/*
+ * CSC 251 JOptionPane Final Project
+ * Jonathan Hardwick
+ * 2023/05/07
  */
 public class Trapezoid {
 
@@ -19,45 +24,58 @@ public class Trapezoid {
     private double s1;      // slanted side 1
     private double s2;      // slanted side 2
     private String input;
+    static ImageIcon icon = new ImageIcon("trapezoid.png");
+    
+    public String userInput(JLabel label){
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Trapezoid:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
+        
+        return input;
+    }
 
     public void setBase1() {
         // Prompt user to input base 1 length.
-        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Base 1 Length:");
+        JLabel label = new JLabel("Enter Base 1 Length:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        b1 = Double.parseDouble(input);
+        b1 = Double.parseDouble(userInput(label));
     }
     
     public void setBase2() {
         // Prompt user to input base 2 length.
-        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Base 2 Length:");
+        JLabel label = new JLabel("Enter Base 2 Length:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        b2 = Double.parseDouble(input);
+        b2 = Double.parseDouble(userInput(label));
     }
 
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Height:");
+        JLabel label = new JLabel("Enter Height:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        height = Double.parseDouble(input);
+        height = Double.parseDouble(userInput(label));
     }
 
     public void setSide1() {
         // Prompt user to input side 1 length.
-        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Side 1 Length:");
+        JLabel label = new JLabel("Enter Side 1 Length:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        s1 = Double.parseDouble(input);
+        s1 = Double.parseDouble(userInput(label));
     }
     
     public void setSide2() {
         // Prompt user to input side 2 length.
-        input = JOptionPane.showInputDialog("Trapezoid: \n" + "Enter Side 1 Length:");
+        JLabel label = new JLabel("Enter Side 2 Length:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        s2 = Double.parseDouble(input);
+        s2 = Double.parseDouble(userInput(label));
     }
 
     public double getPerimeter() {
@@ -71,13 +89,13 @@ public class Trapezoid {
     }
 
     public void printInfo() {
-        JOptionPane.showMessageDialog(null, "Trapezoid: \n"
-                                          + "Base 1:    " + b1 + "\n"
+        JOptionPane.showMessageDialog(null, "Base 1:    " + b1 + "\n"
                                           + "Base 2:    " + b2 + "\n"
                                           + "Height:    " + height + "\n"
                                           + "Side 1:    " + s1 + "\n"
                                           + "Side 2:    " + s2 + "\n"
                                           + "Perimeter: " + getPerimeter() + "\n"
-                                          + "Area:      " + getArea());
+                                          + "Area:      " + getArea(),"Trapezoid",
+                                          JOptionPane.INFORMATION_MESSAGE, icon);
     }
 }

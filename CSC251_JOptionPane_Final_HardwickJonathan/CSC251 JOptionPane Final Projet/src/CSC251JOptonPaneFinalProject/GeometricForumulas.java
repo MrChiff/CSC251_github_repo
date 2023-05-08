@@ -9,13 +9,6 @@ import java.util.*;
 import javax.swing.*;
 import javax.swing.ImageIcon;
 
-/**
- * This program finds the area of a rectangle using input output dialog box.
- *
- */
-
-/*Like TODO:  Add pictures instead of text for the main menu.*/
-
 public class GeometricForumulas {
     static ImageIcon icon = new ImageIcon("allshapes.png");
     public static int getShapeType(){
