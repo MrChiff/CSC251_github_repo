@@ -5,6 +5,7 @@
  */
 package CSC251JOptonPaneFinalProject;
 
+import static CSC251JOptonPaneFinalProject.Circle.icon;
 import static CSC251JOptonPaneFinalProject.Rectangle.icon;
 import java.awt.Font;
 import javax.swing.ImageIcon;
@@ -23,38 +24,39 @@ public class Parallelogram {
     private double length;
     private String input;
     static ImageIcon icon = new ImageIcon("parallelogram.png");
+    
+    public String userInput(JLabel label){
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Parallelogram:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
+        
+        return input;
+    }
 
     public void setWidth() {
         // Prompt user to input width.
         JLabel label = new JLabel("Enter Width:");
         label.setFont(new Font("Arial", Font.BOLD, 18));
-        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Parallelogram:",
-                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
-        width = Double.parseDouble(input);
+        width = Double.parseDouble(userInput(label));
     }
 
     public void setHeight() {
         // Prompt user to input height.
         JLabel label = new JLabel("Enter Height:");
         label.setFont(new Font("Arial", Font.BOLD, 18));
-        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Parallelogram:",
-                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
-        height = Double.parseDouble(input);
+        height = Double.parseDouble(userInput(label));
     }
 
     public void setLength() {
         // Prompt user to input length.
         JLabel label = new JLabel("Enter Length:");
         label.setFont(new Font("Arial", Font.BOLD, 18));
-        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Parallelogram:",
-                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
-        length = Double.parseDouble(input);
+        length = Double.parseDouble(userInput(label));
     }
 
     public double getPerimeter() {

@@ -5,8 +5,9 @@
  */
 package CSC251JOptonPaneFinalProject;
 
-import static CSC251JOptonPaneFinalProject.Triangle.icon;
+import java.awt.Font;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /*
@@ -19,28 +20,39 @@ public class RectangularSolid {
     private double height;
     private double length;
     private String input;
-    static ImageIcon icon = new ImageIcon("parallelogram.png");
-   
+    static ImageIcon icon = new ImageIcon("rectangularSolid.png");
+    
+    public String userInput(JLabel label){
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Rectangular Solid:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
+        
+        return input;
+    }
     public void setWidth() {
         // Prompt user to input width.
-        input = JOptionPane.showInputDialog("Rectanglar Solid: \n" + "Enter Width:");
+        JLabel label = new JLabel("Enter Width:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        width = Double.parseDouble(input);
+        width = Double.parseDouble(userInput(label));
     }
+
     public void setHeight() {
         // Prompt user to input height.
-        input = JOptionPane.showInputDialog("Rectanglar Solid: \n" + "Enter Height:");
+        JLabel label = new JLabel("Enter Height:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        height = Double.parseDouble(input);
+        height = Double.parseDouble(userInput(label));
     }
+
     public void setLength() {
         // Prompt user to input length.
-        input = JOptionPane.showInputDialog("Rectanglar Solid: \n" + "Enter Length:");
+        JLabel label = new JLabel("Enter Length:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        length = Double.parseDouble(input);
+        length = Double.parseDouble(userInput(label));
     }
     public double getSurfaceArea(){
         double surfaceArea = 2.0 * length * height 
@@ -54,12 +66,11 @@ public class RectangularSolid {
     }
    
     public void printInfo() {
-        JOptionPane.showMessageDialog(null, "Rectanglar Solid: \n" 
-                                          + "Base: " + width + "\n"
-                                          + "Height: " + height + "\n" 
-                                          + "Length: " + length + "\n" 
-                                          + "Surface Area: " + getSurfaceArea() + "\n"
-                                          + "Volume: " + getVolume(),"Triangle",
-                                          JOptionPane.INFORMATION_MESSAGE, icon);
+        JOptionPane.showMessageDialog(null, "Width: " + String.format("%.2f",(width)) + "\n"
+                                          + "Height: " + String.format("%.2f",(height)) + "\n" 
+                                          + "Length: " + String.format("%.2f",(length)) + "\n" 
+                                          + "Surface Area: " + String.format("%.2f",(getSurfaceArea())) + "\n"
+                                          + "Volume: " + String.format("%.2f",(getVolume())),
+                                          "Rectangular Solid", JOptionPane.INFORMATION_MESSAGE, icon);
    }
 }
