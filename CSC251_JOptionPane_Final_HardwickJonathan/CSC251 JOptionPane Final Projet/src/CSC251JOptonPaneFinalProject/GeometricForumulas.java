@@ -29,7 +29,7 @@ public class GeometricForumulas {
                             "Right Circular Cone Frustum"};
         
         userInput = JOptionPane.showInputDialog(null,icon,
-                "Geometric Formulas", JOptionPane.QUESTION_MESSAGE, null, 
+                "Geometric Formulas", JOptionPane.PLAIN_MESSAGE, null, 
                 categories,categories[0]);
         
         if (userInput == categories[1]){shapeType = 1;}

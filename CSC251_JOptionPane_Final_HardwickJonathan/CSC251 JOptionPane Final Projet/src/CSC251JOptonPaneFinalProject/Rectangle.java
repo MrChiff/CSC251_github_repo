@@ -6,7 +6,9 @@
 package CSC251JOptonPaneFinalProject;
 
 import static CSC251JOptonPaneFinalProject.Square.icon;
+import java.awt.Font;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /**
@@ -22,7 +24,9 @@ public class Rectangle {
     
     public void setWidth(){
         // Prompt user to input width.
-        input = String.valueOf(JOptionPane.showInputDialog(null, "Enter Width:", "Rectangle:",
+        JLabel label = new JLabel("Enter Width:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Rectangle:",
                 JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
@@ -30,9 +34,10 @@ public class Rectangle {
     }
     public void setLength() {
         // Prompt user to input height.
-        input = String.valueOf(JOptionPane.showInputDialog(null, "Enter Height:", "Rectangle:",
+        JLabel label = new JLabel("Enter Height:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Rectangle:",
                 JOptionPane.INFORMATION_MESSAGE, icon, null,""));
-
         // Convert the String input to a double.
         length = Double.parseDouble(input);
     }

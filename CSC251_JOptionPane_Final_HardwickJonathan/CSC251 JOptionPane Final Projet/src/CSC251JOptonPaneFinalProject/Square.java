@@ -16,13 +16,13 @@ import java.awt.*;
 public class Square {
     private double s;
     private String input;
-    static ImageIcon icon = new ImageIcon("square.png");
+    static ImageIcon icon = new ImageIcon("square1.png");
    
     public void setSide(){
         // Prompt user to input side length.
         JLabel label = new JLabel("Enter Side Length:");
-        label.setFont(new Font("Arial", Font.BOLD, 16));
-        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Square",
+        label.setFont(new Font("Arial", Font.BOLD, 18));
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Square:",
                 JOptionPane.INFORMATION_MESSAGE, icon, null,""));
 
         // Convert the String input to a double.
@@ -40,11 +40,10 @@ public class Square {
     }
    
     public void printInfo() {
-        
-        JOptionPane.showMessageDialog(null,"Length:  " + String.format("    %.2f",(s)) + "\n"
-                                          + "Perimeter:" + String.format("  %.2f",(getPerimeter())) + "\n" 
-                                          + "Area:  " + String.format("     %.2f",(getArea())), 
-                                          "Square", JOptionPane.INFORMATION_MESSAGE, icon);
+        String text = "Length:  " + String.format("%.2f",(s)) + "\n" 
+                    + "Perimeter:  " + String.format("%.2f",(getPerimeter())) + "\n" 
+                    + "Area:  " + String.format("%.2f",(getArea()));
+        JOptionPane.showMessageDialog(null,text,"Square:", JOptionPane.INFORMATION_MESSAGE, icon);
     }
        
 }
