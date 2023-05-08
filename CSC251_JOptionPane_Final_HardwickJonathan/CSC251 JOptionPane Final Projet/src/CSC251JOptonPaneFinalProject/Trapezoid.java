@@ -5,7 +5,6 @@
  */
 package CSC251JOptonPaneFinalProject;
 
-import static CSC251JOptonPaneFinalProject.Parallelogram.icon;
 import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;

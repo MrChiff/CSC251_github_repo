@@ -79,8 +79,7 @@ public class Triangle {
 
     public void printInfo() {
         
-        JOptionPane.showMessageDialog(null, "Triangle:\n" 
-                                          + "Base: " + width + "\n"
+        JOptionPane.showMessageDialog(null, "Base: " + width + "\n"
                                           + "Height: " + height + "\n" 
                                           + "S1: " + s1 + "\n" 
                                           + "S2: " + s2 + "\n" 

@@ -6,7 +6,9 @@
 package CSC251JOptonPaneFinalProject;
 
 import static CSC251JOptonPaneFinalProject.Triangle.icon;
+import java.awt.Font;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /*
@@ -18,14 +20,22 @@ public class Circle {
 
     private double r;       // radius
     private String input;   // user input
-    static ImageIcon icon = new ImageIcon("parallelogram.png");
+    static ImageIcon icon = new ImageIcon("circle.png");
+    
+    public String userInput(JLabel label){
+        input = String.valueOf(JOptionPane.showInputDialog(null, label, "Circle:",
+                JOptionPane.INFORMATION_MESSAGE, icon, null,""));
+        
+        return input;
+    }
 
     public void setRadius() {
         // Prompt user to input radius.
-        input = JOptionPane.showInputDialog("Circle: \n" + "Enter Radius:");
+        JLabel label = new JLabel("Enter Radius:");
+        label.setFont(new Font("Arial", Font.BOLD, 18));
 
         // Convert the String input to a double.
-        r = Double.parseDouble(input);
+        r = Double.parseDouble(userInput(label));
     }
 
     public double getCircumference() {
@@ -41,10 +51,9 @@ public class Circle {
 
     public void printInfo() {
 
-        JOptionPane.showMessageDialog(null, "Circle: \n"
-                                          + "Radius:     " + r + "\n"
-                                          + "Circumference: " + getCircumference() + "\n"
-                                          + "Area:      " + getArea(),"Triangle",
+        JOptionPane.showMessageDialog(null, "Radius:     " + String.format("%.2f",(r)) + "\n"
+                                          + "Circumference: " + String.format("%.2f",(getCircumference())) + "\n"
+                                          + "Area:      " + String.format("%.2f",(getArea())),"Circle",
                                           JOptionPane.INFORMATION_MESSAGE, icon);
     }
 }
